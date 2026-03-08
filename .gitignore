@@ -15,6 +15,13 @@ dist-ssr
 # Pipeline source data — never commit raw CSV to repo
 pipeline/data/*.csv
 
+# Python build artifacts
+*.egg-info/
+__pycache__/
+*.pyc
+*.pyo
+.eggs/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
