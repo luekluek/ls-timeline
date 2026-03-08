@@ -3,20 +3,18 @@ import DataFreshnessTag from './DataFreshnessTag'
 
 export default function AppLayout() {
   return (
-    <div className="min-h-screen bg-slate-900 text-slate-100">
+    <div className="flex flex-col min-h-screen bg-slate-900 text-slate-100">
       <header className="border-b border-slate-800 px-4 py-3 flex items-center justify-between">
-        <nav aria-label="Main navigation">
-          <span className="font-semibold text-indigo-400">ls_timeline</span>
-        </nav>
+        <span className="font-semibold text-indigo-400">ls_timeline</span>
         <DataFreshnessTag />
       </header>
 
       {/* Persistent data caveat banner — FR36 */}
-      <div role="banner" className="bg-slate-800 border-b border-slate-700 px-4 py-2 text-xs text-amber-500">
+      <div role="note" aria-label="Data caveat" className="bg-slate-800 border-b border-slate-700 px-4 py-2 text-xs text-amber-500">
         ⚠️ Data is self-reported by applicants and community-sourced. Treat all statistics as estimates only.
       </div>
 
-      <div className="flex min-h-[calc(100vh-4rem)]">
+      <div className="flex flex-1">
         {/* Sidebar: 220px fixed, desktop only (lg:) */}
         <aside
           className="hidden lg:block w-[220px] shrink-0 border-r border-slate-800 bg-slate-900"
