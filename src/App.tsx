@@ -1,9 +1,10 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { routes } from './router'
+
+const router = createBrowserRouter(routes, { basename: '/ls-timeline/' })
+
 function App() {
-  return (
-    <div className="min-h-screen bg-white">
-      <h1 className="text-2xl font-bold p-4">ls_timeline</h1>
-    </div>
-  )
+  return <RouterProvider router={router} />
 }
 
 export default App

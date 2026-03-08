@@ -1,3 +1,9 @@
-// Route definitions — populated in Story 1.4 (School Selector & Root Navigation)
-// and Story 2.2 (Ribbon Route), Story 3.2 (Predictor Route)
-export {}
+import type { RouteObject } from 'react-router-dom'
+import HomePage from './routes/HomePage'
+
+export const routes: RouteObject[] = [
+  {
+    path: '/',
+    element: <HomePage />,
+  },
+]
