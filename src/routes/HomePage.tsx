@@ -1,7 +1,8 @@
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-slate-900 text-slate-100 p-4">
+    <div>
       <h1 className="text-2xl font-bold text-indigo-400">ls_timeline</h1>
-    </main>
+      <p className="text-slate-400 mt-2">Select a school or set up your profile to get started.</p>
+    </div>
   )
 }
