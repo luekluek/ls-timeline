@@ -23,9 +23,16 @@ describe('profileReducer', () => {
     expect(result).toBeNull()
   })
 
-  it('null initial state — reducer returns null as default', () => {
+  it('SET_PROFILE with null on null state returns null', () => {
     const result = profileReducer(null, { type: 'SET_PROFILE', payload: null })
     expect(result).toBeNull()
+  })
+
+  it('unknown action returns current state unchanged (default branch)', () => {
+    const profile: UserProfile = { gpa: 3.8, lsat: 172 }
+    // @ts-expect-error testing default branch with unknown action type
+    const result = profileReducer(profile, { type: 'UNKNOWN_ACTION' })
+    expect(result).toBe(profile)
   })
 })
 
