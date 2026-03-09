@@ -29,6 +29,7 @@ export function watchlistReducer(
       if (state.some(e => e.school_id === action.payload.school_id)) return state
       return [...state, action.payload]
     case 'REMOVE_SCHOOL':
+      if (!state.some(e => e.school_id === action.payload)) return state
       return state.filter(e => e.school_id !== action.payload)
     default:
       return state
@@ -51,7 +52,10 @@ function initWatchlist(): WatchlistEntry[] {
     if (raw === null) return []
     const parsed = JSON.parse(raw)
     if (!Array.isArray(parsed)) return []
-    return parsed as WatchlistEntry[]
+    return (parsed as unknown[]).filter(
+      (e): e is WatchlistEntry =>
+        typeof e === 'object' && e !== null && typeof (e as WatchlistEntry).school_id === 'string'
+    )
   } catch {
     return []
   }

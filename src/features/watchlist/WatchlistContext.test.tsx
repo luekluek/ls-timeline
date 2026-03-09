@@ -38,10 +38,11 @@ describe('watchlistReducer', () => {
     expect(result[0].school_id).toBe('columbia-law')
   })
 
-  it('REMOVE_SCHOOL with non-existent id returns unchanged state', () => {
+  it('REMOVE_SCHOOL with non-existent id returns same state reference', () => {
     const state: WatchlistEntry[] = [{ school_id: 'harvard-law', applied_month: null }]
     const result = watchlistReducer(state, { type: 'REMOVE_SCHOOL', payload: 'yale-law' })
     expect(result).toHaveLength(1)
+    expect(result).toBe(state) // same reference — bail-out optimization
   })
 
   it('default action returns state unchanged', () => {
@@ -138,5 +139,23 @@ describe('WatchlistProvider', () => {
     localStorage.setItem('lst.watchlist', 'not-valid-json')
     render(<WatchlistDisplay />, { wrapper })
     expect(screen.getByTestId('count').textContent).toBe('0')
+  })
+
+  it('gracefully falls back to [] when localStorage contains valid JSON but non-array', () => {
+    localStorage.setItem('lst.watchlist', '{"school_id":"harvard-law"}')
+    render(<WatchlistDisplay />, { wrapper })
+    expect(screen.getByTestId('count').textContent).toBe('0')
+  })
+
+  it('filters out malformed entries when localStorage array contains invalid items', () => {
+    localStorage.setItem('lst.watchlist', JSON.stringify([
+      { school_id: 'harvard-law', applied_month: 10 },
+      1,
+      null,
+      { wrong: 'shape' },
+    ]))
+    render(<WatchlistDisplay />, { wrapper })
+    expect(screen.getByTestId('count').textContent).toBe('1')
+    expect(screen.getByTestId('ids').textContent).toBe('harvard-law')
   })
 })
