@@ -15,7 +15,7 @@ export function PercentileBar({ percentile }: PercentileBarProps) {
         aria-valuenow={clamped}
         aria-valuemin={0}
         aria-valuemax={100}
-        aria-label={`You are at the ${clamped}th percentile — ${clamped}% of your cohort has received decisions`}
+        aria-label={`You are at the ${clamped}th percentile — ${clamped}% of your cohort have received decisions`}
         className="relative h-3 bg-slate-700 rounded-full overflow-visible"
       >
         <div
