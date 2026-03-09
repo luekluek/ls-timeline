@@ -5,11 +5,12 @@ interface SchoolCardProps {
   school_name: string
   applied_month: number | null
   onRemove: (school_id: string) => void
+  isActive?: boolean
 }
 
-export function SchoolCard({ school_id, school_name, applied_month, onRemove }: SchoolCardProps) {
+export function SchoolCard({ school_id, school_name, applied_month, onRemove, isActive = false }: SchoolCardProps) {
   return (
-    <li className="flex items-center gap-1 rounded-md hover:bg-slate-800">
+    <li className={`flex items-center gap-1 rounded-md hover:bg-slate-800 ${isActive ? 'bg-slate-700 border-l-2 border-indigo-400' : ''}`}>
       <Link
         to={`/school/${school_id}`}
         className="flex-1 flex items-center gap-2 min-h-[44px] px-3 text-sm text-slate-200

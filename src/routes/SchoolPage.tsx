@@ -1,5 +1,11 @@
-import { useParams } from 'react-router-dom'
-import { useSchoolData } from '@/features/school-page'
+import { Link, useParams } from 'react-router-dom'
+import {
+  useSchoolData,
+  CohortHistogram,
+  PercentileBar,
+  ExpectedDecisionLabel,
+  DualKMPanel,
+} from '@/features/school-page'
 import { useWatchlist } from '@/features/watchlist'
 import { StatCard, PhasePlaceholder } from '@/shared/components'
 import { formatCycleWeek, computePercentile } from '@/shared/utils'
@@ -40,21 +46,20 @@ export default function SchoolPage() {
     )
   }
 
-  // Card 1: Median Decision Week (Last Cycle)
+  // --- Stat card values ---
   const medianCard = data.median_decision_week.sparse
     ? { value: '—', label: 'insufficient data' }
     : { value: formatCycleWeek(data.median_decision_week.data!), label: 'Median decision (last cycle)' }
 
-  // Card 2: Current Cycle Week
   const cycleWeekCard = data.current_cycle_week !== null
     ? { value: `Week ${data.current_cycle_week}`, label: 'Current cycle week' }
     : { value: '—', label: 'Current cycle week' }
 
-  // Card 3: Your Cohort Position (Percentile)
   const entry = watchlist.find(e => e.school_id === id)
   const appliedMonth = entry?.applied_month ?? null
 
   let positionCard: { value: string; label: string }
+  let cohortPercentile: number | null = null
 
   if (
     appliedMonth === null ||
@@ -74,12 +79,22 @@ export default function SchoolPage() {
         .filter(b => b.cycle_week <= data.current_cycle_week!)
         .reduce((sum, b) => sum + b.count, 0)
       const pct = computePercentile(decidedCount, cohort.total)
+      cohortPercentile = pct
       positionCard = { value: `${pct}%`, label: 'Of your cohort has decided' }
     }
   }
 
   return (
     <div className="space-y-6">
+      {/* Mobile back link — hidden on lg (sidebar covers navigation there) */}
+      <Link
+        to="/"
+        className="lg:hidden flex items-center gap-1 text-sm text-slate-400 hover:text-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded"
+      >
+        ← My Schools
+      </Link>
+
+      {/* School name */}
       <h1 className="text-xl font-semibold text-slate-100">{data.school_name}</h1>
 
       {/* Stat cards — render before any SVG chart */}
@@ -88,6 +103,29 @@ export default function SchoolPage() {
         <StatCard value={cycleWeekCard.value} label={cycleWeekCard.label} />
         <StatCard value={positionCard.value} label={positionCard.label} />
       </div>
+
+      {/* Cohort histogram */}
+      <CohortHistogram
+        cohortHistograms={data.cohort_histograms}
+        appliedMonth={appliedMonth}
+        currentCycleWeek={data.current_cycle_week}
+        schoolName={data.school_name}
+      />
+
+      {/* Percentile bar — only render when we have a valid percentile */}
+      {cohortPercentile !== null && (
+        <PercentileBar percentile={cohortPercentile} />
+      )}
+
+      {/* Expected decision label */}
+      <ExpectedDecisionLabel medianDecisionWeek={data.median_decision_week} />
+
+      {/* Dual Kaplan-Meier survival curves */}
+      <DualKMPanel
+        lastCycleKm={data.last_cycle_km}
+        currentCycleKm={data.current_cycle_km}
+        schoolName={data.school_name}
+      />
 
       {/* Phase 2 placeholder — outcome predictions require profile (deferred) */}
       <PhasePlaceholder label="Enter your GPA and LSAT to see outcome predictions" />

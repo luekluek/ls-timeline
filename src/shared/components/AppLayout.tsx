@@ -1,10 +1,11 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, useParams } from 'react-router-dom'
 import DataFreshnessTag from './DataFreshnessTag'
 import { useWatchlist, SchoolSearch, SchoolCard } from '@/features/watchlist'
 import { schoolsMap } from '../utils/schoolsMap'
 
 export default function AppLayout() {
   const { watchlist, removeSchool } = useWatchlist()
+  const { id: activeSchoolId } = useParams<{ id: string }>()
 
   return (
     <div className="flex flex-col min-h-screen bg-slate-900 text-slate-100">
@@ -45,6 +46,7 @@ export default function AppLayout() {
                       school_name={schoolsMap.get(entry.school_id) ?? entry.school_id}
                       applied_month={entry.applied_month}
                       onRemove={removeSchool}
+                      isActive={entry.school_id === activeSchoolId}
                     />
                   ))}
                 </ul>

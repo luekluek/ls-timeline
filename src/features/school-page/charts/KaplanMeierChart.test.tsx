@@ -1,6 +1,7 @@
 import { describe, it, expect, vi } from 'vitest'
 import { render } from '@testing-library/react'
 import type { KmPoint } from '@/shared/types'
+import { useResizeObserver } from '@/shared/hooks'
 import { KaplanMeierChart } from './KaplanMeierChart'
 
 vi.mock('@/shared/hooks', () => ({
@@ -23,6 +24,12 @@ const inProgressFixture: KmPoint[] = [
   { cycle_week: 20, survival: 0.75 },
   { cycle_week: 25, survival: 0.75, in_progress: true },
   { cycle_week: 28, survival: 0.75, in_progress: true },
+]
+
+// All-in-progress fixture (no solid event points — survival never dropped from 1.0)
+const allInProgressFixture: KmPoint[] = [
+  { cycle_week: 5, survival: 1.0, in_progress: true },
+  { cycle_week: 10, survival: 1.0, in_progress: true },
 ]
 
 describe('KaplanMeierChart', () => {
@@ -64,6 +71,14 @@ describe('KaplanMeierChart', () => {
     expect(container.querySelector('[stroke-dasharray]')).not.toBeInTheDocument()
   })
 
+  it('all points in_progress (no solid events) → renders dashed line at survival=1.0', () => {
+    const { container } = render(
+      <KaplanMeierChart points={allInProgressFixture} schoolName="Test Law" label="This cycle" />
+    )
+    expect(container.querySelector('[stroke-dasharray]')).toBeInTheDocument()
+    expect(container.querySelector('path')).not.toBeInTheDocument()
+  })
+
   it('isSparse=true renders "Not enough data" text, no <path> element', () => {
     const { getByText, container } = render(
       <KaplanMeierChart points={[]} isSparse schoolName="Test Law" label="Last cycle" />
@@ -77,5 +92,27 @@ describe('KaplanMeierChart', () => {
       <KaplanMeierChart points={[]} isSparse schoolName="Test Law" label="Last cycle" />
     )
     expect(container.querySelector('[role="img"]')).toBeInTheDocument()
+  })
+
+  it('width=0 (initial paint) renders container div but no SVG', () => {
+    vi.mocked(useResizeObserver).mockReturnValueOnce({ width: 0, height: 0 })
+    const { container } = render(
+      <KaplanMeierChart points={solidFixture} schoolName="Test Law" label="Last cycle" />
+    )
+    expect(container.querySelector('svg')).not.toBeInTheDocument()
+    expect(container.querySelector('div')).toBeInTheDocument()
+  })
+
+  it('xDomainMax prop renders chart without error', () => {
+    const { container } = render(
+      <KaplanMeierChart
+        points={solidFixture}
+        xDomainMax={52}
+        schoolName="Test Law"
+        label="Last cycle"
+      />
+    )
+    expect(container.querySelector('[role="img"]')).toBeInTheDocument()
+    expect(container.querySelector('path')).toBeInTheDocument()
   })
 })

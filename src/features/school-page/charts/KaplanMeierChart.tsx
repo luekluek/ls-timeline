@@ -1,4 +1,3 @@
-import * as d3 from 'd3'
 import { useRef } from 'react'
 import { useResizeObserver } from '@/shared/hooks'
 import type { KmPoint } from '@/shared/types'
@@ -29,6 +28,11 @@ export function KaplanMeierChart({
   const containerRef = useRef<HTMLDivElement>(null)
   const { width } = useResizeObserver(containerRef)
 
+  // Early return before D3 computations — ResizeObserver fires async after first paint
+  if (width === 0) {
+    return <div ref={containerRef} className="w-full" style={{ height: `${CHART_HEIGHT}px` }} />
+  }
+
   const innerWidth = Math.max(0, width - MARGIN.left - MARGIN.right)
 
   // Separate event points from censored/in-progress points
@@ -49,98 +53,106 @@ export function KaplanMeierChart({
 
   const solidPath = buildKmStepPath(solidPoints, xScale, yScale)
 
-  // Dashed extension: horizontal line at last solid survival value to right edge
+  // Dashed extension: horizontal line continuing at last survival value to right edge.
+  // When all points are in-progress (no solid events), survival is still 1.0 — extend from x=0.
   let dashedExt: { x1: number; x2: number; y: number } | null = null
-  if (hasInProgressTail && solidPoints.length > 0) {
-    const lastPt = solidPoints[solidPoints.length - 1]
-    dashedExt = {
-      x1: xScale(lastPt.cycle_week),
-      x2: xScale.range()[1],
-      y: yScale(lastPt.survival),
+  if (hasInProgressTail) {
+    if (solidPoints.length > 0) {
+      const lastPt = solidPoints[solidPoints.length - 1]
+      dashedExt = {
+        x1: xScale(lastPt.cycle_week),
+        x2: xScale.range()[1],
+        y: yScale(lastPt.survival),
+      }
+    } else {
+      // All points are in-progress: survival never dropped from 1.0
+      dashedExt = {
+        x1: xScale(0),
+        x2: xScale.range()[1],
+        y: yScale(1.0),
+      }
     }
   }
 
   return (
     <div ref={containerRef} className="w-full" style={{ height: `${CHART_HEIGHT}px` }}>
-      {width > 0 && (
-        <svg
-          role="img"
-          aria-label={`Survival curve for ${schoolName} — ${label}`}
-          width={width}
-          height={CHART_HEIGHT}
-        >
-          {isSparse ? (
-            <text
-              x={width / 2}
-              y={CHART_HEIGHT / 2}
-              textAnchor="middle"
-              dominantBaseline="middle"
-              className="fill-slate-500"
-              fontSize={14}
-            >
-              Not enough data
-            </text>
-          ) : (
-            <g transform={`translate(${MARGIN.left},${MARGIN.top})`}>
-              {/* Solid KM step-function path */}
-              {solidPath && (
-                <path d={solidPath} fill="none" className={strokeClass} strokeWidth={1.5} />
-              )}
+      <svg
+        role="img"
+        aria-label={`Survival curve for ${schoolName} — ${label}`}
+        width={width}
+        height={CHART_HEIGHT}
+      >
+        {isSparse ? (
+          <text
+            x={width / 2}
+            y={CHART_HEIGHT / 2}
+            textAnchor="middle"
+            dominantBaseline="middle"
+            className="fill-slate-500"
+            fontSize={14}
+          >
+            Not enough data
+          </text>
+        ) : (
+          <g transform={`translate(${MARGIN.left},${MARGIN.top})`}>
+            {/* Solid KM step-function path */}
+            {solidPath && (
+              <path d={solidPath} fill="none" className={strokeClass} strokeWidth={1.5} />
+            )}
 
-              {/* Dashed in-progress extension */}
-              {dashedExt && (
-                <line
-                  x1={dashedExt.x1}
-                  x2={dashedExt.x2}
-                  y1={dashedExt.y}
-                  y2={dashedExt.y}
-                  strokeDasharray="4 2"
-                  className={strokeClass}
-                  strokeWidth={1.5}
-                />
-              )}
+            {/* Dashed in-progress extension */}
+            {dashedExt && (
+              <line
+                x1={dashedExt.x1}
+                x2={dashedExt.x2}
+                y1={dashedExt.y}
+                y2={dashedExt.y}
+                strokeDasharray="4 2"
+                className={strokeClass}
+                strokeWidth={1.5}
+              />
+            )}
 
-              {/* X axis */}
-              <g transform={`translate(0,${INNER_HEIGHT})`}>
-                <line x2={innerWidth} className="stroke-slate-700" />
-                {xTicks.map(tick => (
-                  <g key={tick.value} transform={`translate(${xScale(tick.value)},0)`}>
-                    <line y2={4} className="stroke-slate-600" />
-                    <text
-                      y={8}
-                      dy="0.7em"
-                      textAnchor="middle"
-                      fontSize={9}
-                      className="fill-slate-500"
-                    >
-                      {tick.label}
-                    </text>
-                  </g>
-                ))}
-              </g>
-
-              {/* Y axis */}
-              <g>
-                <line y2={INNER_HEIGHT} className="stroke-slate-700" />
-                {yTicks.map(tick => (
-                  <g key={tick.value} transform={`translate(0,${yScale(tick.value)})`}>
-                    <line x2={-4} className="stroke-slate-600" />
-                    <text
-                      x={-8}
-                      dy="0.3em"
-                      textAnchor="end"
-                      fontSize={9}
-                      className="fill-slate-500"
-                    >
-                      {tick.label}
-                    </text>
-                  </g>
-                ))}
-              </g>
+            {/* X axis */}
+            <g transform={`translate(0,${INNER_HEIGHT})`}>
+              <line x2={innerWidth} className="stroke-slate-700" />
+              {xTicks.map(tick => (
+                <g key={tick.value} transform={`translate(${xScale(tick.value)},0)`}>
+                  <line y2={4} className="stroke-slate-600" />
+                  <text
+                    y={8}
+                    dy="0.7em"
+                    textAnchor="middle"
+                    fontSize={9}
+                    className="fill-slate-500"
+                  >
+                    {tick.label}
+                  </text>
+                </g>
+              ))}
             </g>
-          )}
-        </svg>
-      )}
+
+            {/* Y axis */}
+            <g>
+              <line y2={INNER_HEIGHT} className="stroke-slate-700" />
+              {yTicks.map(tick => (
+                <g key={tick.value} transform={`translate(0,${yScale(tick.value)})`}>
+                  <line x2={-4} className="stroke-slate-600" />
+                  <text
+                    x={-8}
+                    dy="0.3em"
+                    textAnchor="end"
+                    fontSize={9}
+                    className="fill-slate-500"
+                  >
+                    {tick.label}
+                  </text>
+                </g>
+              ))}
+            </g>
+          </g>
+        )}
+      </svg>
     </div>
   )
 }

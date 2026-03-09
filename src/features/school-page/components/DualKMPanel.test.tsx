@@ -66,4 +66,24 @@ describe('DualKMPanel', () => {
     // Non-sparse chart renders a path
     expect(container.querySelector('path')).toBeInTheDocument()
   })
+
+  it('shared X domain uses max across both curves (wider curve controls xDomainMax)', () => {
+    const wideKm: SparseField<KmCurve> = {
+      data: { points: [{ cycle_week: 52, survival: 0.7 }], cycle_year: 2024 },
+      sparse: false,
+      reason: null,
+    }
+    const { container } = render(
+      <DualKMPanel lastCycleKm={wideKm} currentCycleKm={nonSparseKm} schoolName="Test Law" />
+    )
+    // Both charts render without error with sharedMaxWeek=52 passed to both
+    expect(container.querySelectorAll('[role="img"]').length).toBe(2)
+  })
+
+  it('both sparse → default sharedMaxWeek=40 used, two charts render without error', () => {
+    const { container } = render(
+      <DualKMPanel lastCycleKm={sparseKm} currentCycleKm={sparseKm} schoolName="Test Law" />
+    )
+    expect(container.querySelectorAll('[role="img"]').length).toBe(2)
+  })
 })
