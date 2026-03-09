@@ -1,7 +1,15 @@
 import { Outlet } from 'react-router-dom'
 import DataFreshnessTag from './DataFreshnessTag'
+import { useWatchlist, SchoolSearch, SchoolCard } from '@/features/watchlist'
+import schoolsIndexJson from '@/data/schools-index.json'
+
+const schoolsMap = new Map(
+  (schoolsIndexJson as { school_id: string; school_name: string }[]).map(s => [s.school_id, s.school_name])
+)
 
 export default function AppLayout() {
+  const { watchlist, removeSchool } = useWatchlist()
+
   return (
     <div className="flex flex-col min-h-screen bg-slate-900 text-slate-100">
       <header className="border-b border-slate-800 px-4 py-3 flex items-center justify-between">
@@ -20,7 +28,33 @@ export default function AppLayout() {
           className="hidden lg:block w-[220px] shrink-0 border-r border-slate-800 bg-slate-900"
           aria-label="School watchlist"
         >
-          {/* Watchlist content added in Story 3.5 */}
+          <div className="flex flex-col h-full p-3">
+            <div className="flex items-center justify-between mb-3">
+              <span className="text-xs font-semibold text-slate-400 uppercase tracking-wide">
+                My Schools
+              </span>
+              <SchoolSearch />
+            </div>
+            {watchlist.length === 0 ? (
+              <p className="text-xs text-slate-500 text-center py-6">
+                Add schools to track timing
+              </p>
+            ) : (
+              <nav aria-label="Watchlist schools">
+                <ul className="space-y-0.5">
+                  {watchlist.map(entry => (
+                    <SchoolCard
+                      key={entry.school_id}
+                      school_id={entry.school_id}
+                      school_name={schoolsMap.get(entry.school_id) ?? entry.school_id}
+                      applied_month={entry.applied_month}
+                      onRemove={removeSchool}
+                    />
+                  ))}
+                </ul>
+              </nav>
+            )}
+          </div>
         </aside>
 
         <main className="flex-1 p-4 lg:p-6">
