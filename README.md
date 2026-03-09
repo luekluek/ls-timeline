@@ -1,73 +1,41 @@
-# React + TypeScript + Vite
+# ls_timeline
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A statistical analysis web app for law school applicants that turns community-sourced application data into rigorous, interpretable insights.
 
-Currently, two official plugins are available:
+## What it does
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ls_timeline helps applicants understand not just what the data shows, but what it means for their specific situation. Enter your GPA and LSAT, add schools to your watchlist, and see where you stand in the decision timeline relative to historical cohort peers — applicants who applied the same month as you, not the general pool.
 
-## React Compiler
+The core analysis is **decision timing**: Kaplan-Meier survival curves with cycle-week normalization, so you can honestly compare wait times across multiple admission cycles. A percentile progress bar and expected decision date label frame your wait relative to your cohort, answering "is my wait normal?" without implying the school is late or broke a promise.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+Your profile and watchlist persist across sessions via localStorage.
 
-## Expanding the ESLint configuration
+## Planned features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Phase 1 — MVP (Decision Timeline)** (Completed)
+- User profile (GPA + LSAT), skippable for casual visitors
+- Searchable school watchlist, persistent across sessions
+- Per-school cohort histogram, percentile progress bar, expected decision date
+- Dual Kaplan-Meier survival curves (last completed cycle + current cycle)
+- Data freshness timestamp, responsive layout (mobile + desktop)
+- Python pipeline producing static JSON from source data; GitHub Pages deployment
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**Phase 2 — Predictive Models**
+- KM confidence bands
+- Per-school multinomial logistic regression (Accepted / Waitlisted / Rejected) with confidence intervals
+- Scholarship prediction (GPA + LSAT + acceptance date) with explicit confounding caveats
+- Multi-school overview with outcome tier clustering
+- Data sparsity warnings and hidden diagnostics panel
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+**Phase 3 — Vision**
+- Additional datasets
+- Annotation layers for notable cycle events
+- Shareable school-specific links
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Data
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+ls_timeline uses self-reported applicant data published by [LSD.law](https://lsd.law). All analysis is derived from this community-contributed dataset. Thank you to LSD.law for making this data publicly available — this project would not exist without it.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Tech stack
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Vite + React 19 + TypeScript · Tailwind CSS v4 · D3 v7 · Python 3.11+ pipeline · GitHub Pages

@@ -80,7 +80,7 @@ export default function SchoolPage() {
         .reduce((sum, b) => sum + b.count, 0)
       const pct = computePercentile(decidedCount, cohort.total)
       cohortPercentile = pct
-      positionCard = { value: `${pct}%`, label: 'Of your cohort has decided' }
+      positionCard = { value: `${pct}%`, label: 'Applying the same month (cohort) have recieved a decision' }
     }
   }
 
