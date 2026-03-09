@@ -1,0 +1,76 @@
+{
+  "school_id": "part-time-northern-kentucky-university",
+  "school_name": "(Part-time) Northern Kentucky University",
+  "last_cycle_km": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "current_cycle_km": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "cohort_histograms": {
+    "sparse": false,
+    "reason": null,
+    "data": [
+      {
+        "applied_month": 1,
+        "bins": [
+          {
+            "cycle_week": 24,
+            "count": 1
+          }
+        ],
+        "total": 1
+      },
+      {
+        "applied_month": 2,
+        "bins": [
+          {
+            "cycle_week": 25,
+            "count": 1
+          }
+        ],
+        "total": 1
+      },
+      {
+        "applied_month": 10,
+        "bins": [
+          {
+            "cycle_week": 8,
+            "count": 1
+          }
+        ],
+        "total": 1
+      },
+      {
+        "applied_month": 11,
+        "bins": [
+          {
+            "cycle_week": 12,
+            "count": 1
+          }
+        ],
+        "total": 1
+      },
+      {
+        "applied_month": 12,
+        "bins": [
+          {
+            "cycle_week": 15,
+            "count": 1
+          }
+        ],
+        "total": 1
+      }
+    ]
+  },
+  "median_decision_week": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "current_cycle_week": null
+}

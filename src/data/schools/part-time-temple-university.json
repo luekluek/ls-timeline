@@ -1,0 +1,239 @@
+{
+  "school_id": "part-time-temple-university",
+  "school_name": "(Part-time) Temple University",
+  "last_cycle_km": {
+    "sparse": false,
+    "reason": null,
+    "data": {
+      "points": [
+        {
+          "cycle_week": 0,
+          "survival": 1.0
+        },
+        {
+          "cycle_week": 16,
+          "survival": 0.833333
+        },
+        {
+          "cycle_week": 20,
+          "survival": 0.583333
+        },
+        {
+          "cycle_week": 23,
+          "survival": 0.5
+        },
+        {
+          "cycle_week": 26,
+          "survival": 0.416667
+        },
+        {
+          "cycle_week": 28,
+          "survival": 0.25
+        }
+      ],
+      "cycle_year": 2025
+    }
+  },
+  "current_cycle_km": {
+    "sparse": false,
+    "reason": null,
+    "data": {
+      "points": [
+        {
+          "cycle_week": 0,
+          "survival": 1.0
+        },
+        {
+          "cycle_week": 19,
+          "survival": 0.882353
+        },
+        {
+          "cycle_week": 20,
+          "survival": 0.823529
+        },
+        {
+          "cycle_week": 22,
+          "survival": 0.764706
+        },
+        {
+          "cycle_week": 24,
+          "survival": 0.705882
+        },
+        {
+          "cycle_week": 25,
+          "survival": 0.588235,
+          "in_progress": true
+        }
+      ],
+      "cycle_year": 2026
+    }
+  },
+  "cohort_histograms": {
+    "sparse": false,
+    "reason": null,
+    "data": [
+      {
+        "applied_month": 1,
+        "bins": [
+          {
+            "cycle_week": 22,
+            "count": 1
+          },
+          {
+            "cycle_week": 25,
+            "count": 1
+          },
+          {
+            "cycle_week": 28,
+            "count": 2
+          }
+        ],
+        "total": 7
+      },
+      {
+        "applied_month": 2,
+        "bins": [
+          {
+            "cycle_week": 29,
+            "count": 1
+          },
+          {
+            "cycle_week": 32,
+            "count": 1
+          },
+          {
+            "cycle_week": 34,
+            "count": 1
+          }
+        ],
+        "total": 6
+      },
+      {
+        "applied_month": 3,
+        "bins": [
+          {
+            "cycle_week": 35,
+            "count": 1
+          },
+          {
+            "cycle_week": 36,
+            "count": 1
+          }
+        ],
+        "total": 2
+      },
+      {
+        "applied_month": 5,
+        "bins": [
+          {
+            "cycle_week": 37,
+            "count": 1
+          }
+        ],
+        "total": 1
+      },
+      {
+        "applied_month": 9,
+        "bins": [
+          {
+            "cycle_week": 16,
+            "count": 6
+          },
+          {
+            "cycle_week": 19,
+            "count": 2
+          },
+          {
+            "cycle_week": 20,
+            "count": 1
+          }
+        ],
+        "total": 10
+      },
+      {
+        "applied_month": 10,
+        "bins": [
+          {
+            "cycle_week": 16,
+            "count": 1
+          },
+          {
+            "cycle_week": 19,
+            "count": 2
+          },
+          {
+            "cycle_week": 20,
+            "count": 2
+          },
+          {
+            "cycle_week": 21,
+            "count": 1
+          }
+        ],
+        "total": 11
+      },
+      {
+        "applied_month": 11,
+        "bins": [
+          {
+            "cycle_week": 16,
+            "count": 4
+          },
+          {
+            "cycle_week": 19,
+            "count": 1
+          },
+          {
+            "cycle_week": 20,
+            "count": 1
+          },
+          {
+            "cycle_week": 22,
+            "count": 2
+          },
+          {
+            "cycle_week": 24,
+            "count": 1
+          }
+        ],
+        "total": 14
+      },
+      {
+        "applied_month": 12,
+        "bins": [
+          {
+            "cycle_week": 19,
+            "count": 1
+          },
+          {
+            "cycle_week": 21,
+            "count": 1
+          },
+          {
+            "cycle_week": 23,
+            "count": 1
+          },
+          {
+            "cycle_week": 25,
+            "count": 2
+          },
+          {
+            "cycle_week": 26,
+            "count": 1
+          },
+          {
+            "cycle_week": 27,
+            "count": 1
+          }
+        ],
+        "total": 11
+      }
+    ]
+  },
+  "median_decision_week": {
+    "sparse": false,
+    "reason": null,
+    "data": 20
+  },
+  "current_cycle_week": 27
+}

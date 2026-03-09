@@ -1,0 +1,227 @@
+{
+  "school_id": "jacksonville-university-college-of-law",
+  "school_name": "Jacksonville University College of Law",
+  "last_cycle_km": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "current_cycle_km": {
+    "sparse": false,
+    "reason": null,
+    "data": {
+      "points": [
+        {
+          "cycle_week": 0,
+          "survival": 1.0
+        },
+        {
+          "cycle_week": 7,
+          "survival": 0.976744
+        },
+        {
+          "cycle_week": 9,
+          "survival": 0.953488
+        },
+        {
+          "cycle_week": 10,
+          "survival": 0.906977
+        },
+        {
+          "cycle_week": 11,
+          "survival": 0.883721
+        },
+        {
+          "cycle_week": 12,
+          "survival": 0.744186
+        },
+        {
+          "cycle_week": 13,
+          "survival": 0.674419
+        },
+        {
+          "cycle_week": 15,
+          "survival": 0.627907
+        },
+        {
+          "cycle_week": 16,
+          "survival": 0.604651
+        },
+        {
+          "cycle_week": 19,
+          "survival": 0.511628
+        },
+        {
+          "cycle_week": 20,
+          "survival": 0.488372
+        },
+        {
+          "cycle_week": 21,
+          "survival": 0.44186
+        },
+        {
+          "cycle_week": 23,
+          "survival": 0.348837
+        },
+        {
+          "cycle_week": 24,
+          "survival": 0.302326
+        },
+        {
+          "cycle_week": 25,
+          "survival": 0.209302
+        },
+        {
+          "cycle_week": 26,
+          "survival": 0.162791,
+          "in_progress": true
+        }
+      ],
+      "cycle_year": 2026
+    }
+  },
+  "cohort_histograms": {
+    "sparse": false,
+    "reason": null,
+    "data": [
+      {
+        "applied_month": 1,
+        "bins": [
+          {
+            "cycle_week": 23,
+            "count": 2
+          },
+          {
+            "cycle_week": 25,
+            "count": 1
+          },
+          {
+            "cycle_week": 26,
+            "count": 1
+          }
+        ],
+        "total": 6
+      },
+      {
+        "applied_month": 2,
+        "bins": [
+          {
+            "cycle_week": 24,
+            "count": 1
+          },
+          {
+            "cycle_week": 25,
+            "count": 3
+          },
+          {
+            "cycle_week": 26,
+            "count": 1
+          }
+        ],
+        "total": 6
+      },
+      {
+        "applied_month": 9,
+        "bins": [
+          {
+            "cycle_week": 7,
+            "count": 1
+          },
+          {
+            "cycle_week": 9,
+            "count": 1
+          },
+          {
+            "cycle_week": 12,
+            "count": 1
+          }
+        ],
+        "total": 3
+      },
+      {
+        "applied_month": 10,
+        "bins": [
+          {
+            "cycle_week": 10,
+            "count": 2
+          },
+          {
+            "cycle_week": 11,
+            "count": 1
+          },
+          {
+            "cycle_week": 12,
+            "count": 3
+          },
+          {
+            "cycle_week": 15,
+            "count": 2
+          },
+          {
+            "cycle_week": 16,
+            "count": 1
+          },
+          {
+            "cycle_week": 20,
+            "count": 1
+          },
+          {
+            "cycle_week": 23,
+            "count": 1
+          }
+        ],
+        "total": 11
+      },
+      {
+        "applied_month": 11,
+        "bins": [
+          {
+            "cycle_week": 12,
+            "count": 2
+          },
+          {
+            "cycle_week": 13,
+            "count": 3
+          },
+          {
+            "cycle_week": 19,
+            "count": 2
+          },
+          {
+            "cycle_week": 21,
+            "count": 1
+          }
+        ],
+        "total": 9
+      },
+      {
+        "applied_month": 12,
+        "bins": [
+          {
+            "cycle_week": 19,
+            "count": 2
+          },
+          {
+            "cycle_week": 21,
+            "count": 1
+          },
+          {
+            "cycle_week": 23,
+            "count": 2
+          },
+          {
+            "cycle_week": 24,
+            "count": 1
+          }
+        ],
+        "total": 9
+      }
+    ]
+  },
+  "median_decision_week": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "current_cycle_week": 27
+}

@@ -1,0 +1,1178 @@
+[
+  {
+    "school_id": "albany-law-school-of-union-university",
+    "school_name": "Albany Law School Of Union University"
+  },
+  {
+    "school_id": "american-university",
+    "school_name": "American University"
+  },
+  {
+    "school_id": "appalachian-school-of-law",
+    "school_name": "Appalachian School of Law"
+  },
+  {
+    "school_id": "arizona-state-university",
+    "school_name": "Arizona State University"
+  },
+  {
+    "school_id": "atlantas-john-marshall-law-school",
+    "school_name": "Atlanta's John Marshall Law School"
+  },
+  {
+    "school_id": "ave-maria-school-of-law",
+    "school_name": "Ave Maria School Of Law"
+  },
+  {
+    "school_id": "barry-university",
+    "school_name": "Barry University"
+  },
+  {
+    "school_id": "baylor-university",
+    "school_name": "Baylor University"
+  },
+  {
+    "school_id": "belmont-university",
+    "school_name": "Belmont University"
+  },
+  {
+    "school_id": "boston-college",
+    "school_name": "Boston College"
+  },
+  {
+    "school_id": "boston-university",
+    "school_name": "Boston University"
+  },
+  {
+    "school_id": "brigham-young-university",
+    "school_name": "Brigham Young University"
+  },
+  {
+    "school_id": "brooklyn-law-school",
+    "school_name": "Brooklyn Law School"
+  },
+  {
+    "school_id": "california-western-school-of-law",
+    "school_name": "California Western School Of Law"
+  },
+  {
+    "school_id": "campbell-university",
+    "school_name": "Campbell University"
+  },
+  {
+    "school_id": "capital-university",
+    "school_name": "Capital University"
+  },
+  {
+    "school_id": "case-western-reserve-university",
+    "school_name": "Case Western Reserve University"
+  },
+  {
+    "school_id": "catholic-university-of-america",
+    "school_name": "Catholic University Of America"
+  },
+  {
+    "school_id": "chapman-university",
+    "school_name": "Chapman University"
+  },
+  {
+    "school_id": "charleston-school-of-law",
+    "school_name": "Charleston School Of Law"
+  },
+  {
+    "school_id": "charlotte-school-of-law",
+    "school_name": "Charlotte School of Law"
+  },
+  {
+    "school_id": "cleveland-state-university",
+    "school_name": "Cleveland State University"
+  },
+  {
+    "school_id": "columbia-university",
+    "school_name": "Columbia University"
+  },
+  {
+    "school_id": "cornell-university",
+    "school_name": "Cornell University"
+  },
+  {
+    "school_id": "creighton-university",
+    "school_name": "Creighton University"
+  },
+  {
+    "school_id": "cuny",
+    "school_name": "CUNY"
+  },
+  {
+    "school_id": "dalhousie-university",
+    "school_name": "Dalhousie University"
+  },
+  {
+    "school_id": "depaul-university",
+    "school_name": "DePaul University"
+  },
+  {
+    "school_id": "drake-university",
+    "school_name": "Drake University"
+  },
+  {
+    "school_id": "drexel-university",
+    "school_name": "Drexel University"
+  },
+  {
+    "school_id": "duke-university",
+    "school_name": "Duke University"
+  },
+  {
+    "school_id": "duquesne-university",
+    "school_name": "Duquesne University"
+  },
+  {
+    "school_id": "elon-university",
+    "school_name": "Elon University"
+  },
+  {
+    "school_id": "emory-university",
+    "school_name": "Emory University"
+  },
+  {
+    "school_id": "florida-am-university",
+    "school_name": "Florida A&M University"
+  },
+  {
+    "school_id": "florida-coastal-school-of-law",
+    "school_name": "Florida Coastal School Of Law"
+  },
+  {
+    "school_id": "florida-international-university",
+    "school_name": "Florida International University"
+  },
+  {
+    "school_id": "florida-state-university",
+    "school_name": "Florida State University"
+  },
+  {
+    "school_id": "fordham-university",
+    "school_name": "Fordham University"
+  },
+  {
+    "school_id": "george-mason-university",
+    "school_name": "George Mason University"
+  },
+  {
+    "school_id": "george-washington-university",
+    "school_name": "George Washington University"
+  },
+  {
+    "school_id": "georgetown-university",
+    "school_name": "Georgetown University"
+  },
+  {
+    "school_id": "georgia-state-university",
+    "school_name": "Georgia State University"
+  },
+  {
+    "school_id": "golden-gate-university",
+    "school_name": "Golden Gate University"
+  },
+  {
+    "school_id": "gonzaga-university",
+    "school_name": "Gonzaga University"
+  },
+  {
+    "school_id": "harvard-university",
+    "school_name": "Harvard University"
+  },
+  {
+    "school_id": "hofstra-university",
+    "school_name": "Hofstra University"
+  },
+  {
+    "school_id": "howard-university",
+    "school_name": "Howard University"
+  },
+  {
+    "school_id": "illinois-institute-of-technology-kent",
+    "school_name": "Illinois Institute of Technology (Kent)"
+  },
+  {
+    "school_id": "indiana-university-bloomington",
+    "school_name": "Indiana University - Bloomington"
+  },
+  {
+    "school_id": "indiana-university-indianapolis",
+    "school_name": "Indiana University - Indianapolis"
+  },
+  {
+    "school_id": "inter-american-university-school-of-law",
+    "school_name": "Inter American University School of Law"
+  },
+  {
+    "school_id": "jacksonville-university-college-of-law",
+    "school_name": "Jacksonville University College of Law"
+  },
+  {
+    "school_id": "jones-school-of-law",
+    "school_name": "Jones School of Law"
+  },
+  {
+    "school_id": "lewis-and-clark-college",
+    "school_name": "Lewis And Clark College"
+  },
+  {
+    "school_id": "liberty-university",
+    "school_name": "Liberty University"
+  },
+  {
+    "school_id": "lincoln-memorial",
+    "school_name": "Lincoln Memorial"
+  },
+  {
+    "school_id": "louisiana-state-university",
+    "school_name": "Louisiana State University"
+  },
+  {
+    "school_id": "loyola-marymount-universitylos-angeles",
+    "school_name": "Loyola Marymount University—Los Angeles"
+  },
+  {
+    "school_id": "loyola-universitychicago",
+    "school_name": "Loyola University—Chicago"
+  },
+  {
+    "school_id": "loyola-universitynew-orleans",
+    "school_name": "Loyola University—New Orleans"
+  },
+  {
+    "school_id": "marquette-university",
+    "school_name": "Marquette University"
+  },
+  {
+    "school_id": "mcgill-university",
+    "school_name": "McGill University"
+  },
+  {
+    "school_id": "mercer-university",
+    "school_name": "Mercer University"
+  },
+  {
+    "school_id": "michigan-state-university",
+    "school_name": "Michigan State University"
+  },
+  {
+    "school_id": "mississippi-college",
+    "school_name": "Mississippi College"
+  },
+  {
+    "school_id": "mitchell-hamline",
+    "school_name": "Mitchell Hamline"
+  },
+  {
+    "school_id": "nashville-school-of-law",
+    "school_name": "Nashville School of Law"
+  },
+  {
+    "school_id": "new-england-law-boston",
+    "school_name": "New England Law | Boston"
+  },
+  {
+    "school_id": "new-york-law-school",
+    "school_name": "New York Law School"
+  },
+  {
+    "school_id": "new-york-university",
+    "school_name": "New York University"
+  },
+  {
+    "school_id": "north-carolina-central-university",
+    "school_name": "North Carolina Central University"
+  },
+  {
+    "school_id": "northeastern-university",
+    "school_name": "Northeastern University"
+  },
+  {
+    "school_id": "northern-illinois-university",
+    "school_name": "Northern Illinois University"
+  },
+  {
+    "school_id": "northern-kentucky-university",
+    "school_name": "Northern Kentucky University"
+  },
+  {
+    "school_id": "northwestern-university",
+    "school_name": "Northwestern University"
+  },
+  {
+    "school_id": "nova-southeastern-university",
+    "school_name": "Nova Southeastern University"
+  },
+  {
+    "school_id": "ohio-northern-university",
+    "school_name": "Ohio Northern University"
+  },
+  {
+    "school_id": "ohio-state-university",
+    "school_name": "Ohio State University"
+  },
+  {
+    "school_id": "oklahoma-city-university",
+    "school_name": "Oklahoma City University"
+  },
+  {
+    "school_id": "pace-university",
+    "school_name": "Pace University"
+  },
+  {
+    "school_id": "part-time-american-university",
+    "school_name": "(Part-time) American University"
+  },
+  {
+    "school_id": "part-time-barry-university",
+    "school_name": "(Part-time) Barry University"
+  },
+  {
+    "school_id": "part-time-brooklyn-law-school",
+    "school_name": "(Part-time) Brooklyn Law School"
+  },
+  {
+    "school_id": "part-time-california-western-school-of-law",
+    "school_name": "(Part-time) California Western School of Law"
+  },
+  {
+    "school_id": "part-time-capital-university",
+    "school_name": "(Part-time) Capital University"
+  },
+  {
+    "school_id": "part-time-catholic-university-of-america",
+    "school_name": "(Part-time) Catholic University Of America"
+  },
+  {
+    "school_id": "part-time-cleveland-state-university",
+    "school_name": "(Part-time) Cleveland State University"
+  },
+  {
+    "school_id": "part-time-cuny",
+    "school_name": "(Part-time) CUNY"
+  },
+  {
+    "school_id": "part-time-depaul-university",
+    "school_name": "(Part-time) DePaul University"
+  },
+  {
+    "school_id": "part-time-duquesne-university",
+    "school_name": "(Part-time) Duquesne University"
+  },
+  {
+    "school_id": "part-time-florida-am-university",
+    "school_name": "(Part-time) Florida A&M University"
+  },
+  {
+    "school_id": "part-time-florida-international-university",
+    "school_name": "(Part-time) Florida International University"
+  },
+  {
+    "school_id": "part-time-fordham-university",
+    "school_name": "(Part-time) Fordham University"
+  },
+  {
+    "school_id": "part-time-george-mason-university",
+    "school_name": "(Part-time) George Mason University"
+  },
+  {
+    "school_id": "part-time-george-washington-university",
+    "school_name": "(Part-time) George Washington University"
+  },
+  {
+    "school_id": "part-time-georgetown-university",
+    "school_name": "(Part-time) Georgetown University"
+  },
+  {
+    "school_id": "part-time-georgia-state-university",
+    "school_name": "(Part-time) Georgia State University"
+  },
+  {
+    "school_id": "part-time-golden-gate-university",
+    "school_name": "(Part-time) Golden Gate University"
+  },
+  {
+    "school_id": "part-time-hofstra-university",
+    "school_name": "(Part-time) Hofstra University"
+  },
+  {
+    "school_id": "part-time-illinois-institute-of-technology-kent",
+    "school_name": "(Part-time) Illinois Institute of Technology (Kent)"
+  },
+  {
+    "school_id": "part-time-indiana-university-indianapolis",
+    "school_name": "(Part-time) Indiana University - Indianapolis"
+  },
+  {
+    "school_id": "part-time-john-marshall-law-school",
+    "school_name": "(Part-time) John Marshall Law School"
+  },
+  {
+    "school_id": "part-time-lewis-and-clark-college",
+    "school_name": "(Part-time) Lewis And Clark College"
+  },
+  {
+    "school_id": "part-time-loyola-marymount-universitylos-angeles",
+    "school_name": "(Part-time) Loyola Marymount University—Los Angeles"
+  },
+  {
+    "school_id": "part-time-loyola-university-chicago",
+    "school_name": "(Part-time) Loyola University Chicago"
+  },
+  {
+    "school_id": "part-time-loyola-universitynew-orleans",
+    "school_name": "(Part-time) Loyola University—New Orleans"
+  },
+  {
+    "school_id": "part-time-marquette-university",
+    "school_name": "(Part-time) Marquette University"
+  },
+  {
+    "school_id": "part-time-mitchell-hamline",
+    "school_name": "(Part-time) Mitchell Hamline"
+  },
+  {
+    "school_id": "part-time-new-england-law-boston",
+    "school_name": "(Part-time) New England Law | Boston"
+  },
+  {
+    "school_id": "part-time-new-york-law-school",
+    "school_name": "(Part-time) New York Law School"
+  },
+  {
+    "school_id": "part-time-north-carolina-central-university",
+    "school_name": "(Part-time) North Carolina Central University"
+  },
+  {
+    "school_id": "part-time-northern-kentucky-university",
+    "school_name": "(Part-time) Northern Kentucky University"
+  },
+  {
+    "school_id": "part-time-nova-southeastern-university",
+    "school_name": "(Part-time) Nova Southeastern University"
+  },
+  {
+    "school_id": "part-time-pace-university",
+    "school_name": "(Part-time) Pace University"
+  },
+  {
+    "school_id": "part-time-quinnipiac-university",
+    "school_name": "(Part-time) Quinnipiac University"
+  },
+  {
+    "school_id": "part-time-rutgers-university-merged",
+    "school_name": "(Part-time) Rutgers University (merged)"
+  },
+  {
+    "school_id": "part-time-saint-louis-university",
+    "school_name": "(Part-time) Saint Louis University"
+  },
+  {
+    "school_id": "part-time-santa-clara-university",
+    "school_name": "(Part-time) Santa Clara University"
+  },
+  {
+    "school_id": "part-time-seattle-university",
+    "school_name": "(Part-time) Seattle University"
+  },
+  {
+    "school_id": "part-time-seton-hall-university",
+    "school_name": "(Part-time) Seton Hall University"
+  },
+  {
+    "school_id": "part-time-south-texas-college-of-lawhouston",
+    "school_name": "(Part-time) South Texas College Of Law—Houston"
+  },
+  {
+    "school_id": "part-time-southwestern-law-school",
+    "school_name": "(Part-time) Southwestern Law School"
+  },
+  {
+    "school_id": "part-time-st-johns-university",
+    "school_name": "(Part-time) St. John's University"
+  },
+  {
+    "school_id": "part-time-st-marys-university",
+    "school_name": "(Part-time) St. Mary's University"
+  },
+  {
+    "school_id": "part-time-stetson-university",
+    "school_name": "(Part-time) Stetson University"
+  },
+  {
+    "school_id": "part-time-suffolk-university",
+    "school_name": "(Part-time) Suffolk University"
+  },
+  {
+    "school_id": "part-time-syracuse-university",
+    "school_name": "(Part-time) Syracuse University"
+  },
+  {
+    "school_id": "part-time-temple-university",
+    "school_name": "(Part-time) Temple University"
+  },
+  {
+    "school_id": "part-time-touro-college",
+    "school_name": "(Part-time) Touro College"
+  },
+  {
+    "school_id": "part-time-university-of-akron",
+    "school_name": "(Part-time) University of Akron"
+  },
+  {
+    "school_id": "part-time-university-of-arkansas-little-rock",
+    "school_name": "(Part-time) University of Arkansas, Little Rock"
+  },
+  {
+    "school_id": "part-time-university-of-baltimore",
+    "school_name": "(Part-time) University of Baltimore"
+  },
+  {
+    "school_id": "part-time-university-of-connecticut",
+    "school_name": "(Part-time) University of Connecticut"
+  },
+  {
+    "school_id": "part-time-university-of-dayton",
+    "school_name": "(Part-time) University of Dayton"
+  },
+  {
+    "school_id": "part-time-university-of-denver",
+    "school_name": "(Part-time) University of Denver"
+  },
+  {
+    "school_id": "part-time-university-of-detroit-mercy",
+    "school_name": "(Part-time) University of Detroit Mercy"
+  },
+  {
+    "school_id": "part-time-university-of-hawaii",
+    "school_name": "(Part-time) University of Hawaii"
+  },
+  {
+    "school_id": "part-time-university-of-houston",
+    "school_name": "(Part-time) University of Houston"
+  },
+  {
+    "school_id": "part-time-university-of-maryland",
+    "school_name": "(Part-time) University of Maryland"
+  },
+  {
+    "school_id": "part-time-university-of-massachusetts-dartmouth",
+    "school_name": "(Part-time) University of Massachusetts Dartmouth"
+  },
+  {
+    "school_id": "part-time-university-of-nevadalas-vegas",
+    "school_name": "(Part-time) University of Nevada—Las Vegas"
+  },
+  {
+    "school_id": "part-time-university-of-san-diego",
+    "school_name": "(Part-time) University of San Diego"
+  },
+  {
+    "school_id": "part-time-university-of-san-francisco",
+    "school_name": "(Part-time) University of San Francisco"
+  },
+  {
+    "school_id": "part-time-university-of-the-district-of-columbia",
+    "school_name": "(Part-time) University of the District of Columbia"
+  },
+  {
+    "school_id": "part-time-university-of-the-pacific-mcgeorge",
+    "school_name": "(Part-time) University of the Pacific (McGeorge)"
+  },
+  {
+    "school_id": "part-time-university-of-toledo",
+    "school_name": "(Part-time) University of Toledo"
+  },
+  {
+    "school_id": "part-time-wayne-state-university",
+    "school_name": "(Part-time) Wayne State University"
+  },
+  {
+    "school_id": "part-time-western-new-england-university",
+    "school_name": "(Part-time) Western New England University"
+  },
+  {
+    "school_id": "part-time-widener-universitydelaware",
+    "school_name": "(Part-time) Widener University—Delaware"
+  },
+  {
+    "school_id": "part-time-widener-universitypennsylvania-commonwealth",
+    "school_name": "(Part-time) Widener University—Pennsylvania (Commonwealth)"
+  },
+  {
+    "school_id": "pennsylvania-state-dickinson-law",
+    "school_name": "Pennsylvania State - Dickinson Law"
+  },
+  {
+    "school_id": "pennsylvania-state-penn-state-law",
+    "school_name": "Pennsylvania State - Penn State Law"
+  },
+  {
+    "school_id": "pepperdine-university",
+    "school_name": "Pepperdine University"
+  },
+  {
+    "school_id": "phoenix-school-of-law",
+    "school_name": "Phoenix School of Law"
+  },
+  {
+    "school_id": "pontifical-catholic-university",
+    "school_name": "Pontifical Catholic University"
+  },
+  {
+    "school_id": "queens-university",
+    "school_name": "Queen's University"
+  },
+  {
+    "school_id": "quinnipiac-university",
+    "school_name": "Quinnipiac University"
+  },
+  {
+    "school_id": "regent-university",
+    "school_name": "Regent University"
+  },
+  {
+    "school_id": "roger-williams-university",
+    "school_name": "Roger Williams University"
+  },
+  {
+    "school_id": "rutgers-state-university-camden-old",
+    "school_name": "Rutgers State University Camden (old)"
+  },
+  {
+    "school_id": "rutgers-state-university-newark-old",
+    "school_name": "Rutgers State University Newark (old)"
+  },
+  {
+    "school_id": "rutgers-university",
+    "school_name": "Rutgers University"
+  },
+  {
+    "school_id": "saint-louis-university",
+    "school_name": "Saint Louis University"
+  },
+  {
+    "school_id": "samford-university",
+    "school_name": "Samford University"
+  },
+  {
+    "school_id": "santa-clara-university",
+    "school_name": "Santa Clara University"
+  },
+  {
+    "school_id": "seattle-university",
+    "school_name": "Seattle University"
+  },
+  {
+    "school_id": "seton-hall-university",
+    "school_name": "Seton Hall University"
+  },
+  {
+    "school_id": "south-texas-college-of-lawhouston",
+    "school_name": "South Texas College Of Law—Houston"
+  },
+  {
+    "school_id": "southern-illinois-universitycarbondale",
+    "school_name": "Southern Illinois University—Carbondale"
+  },
+  {
+    "school_id": "southern-methodist-university",
+    "school_name": "Southern Methodist University"
+  },
+  {
+    "school_id": "southern-university",
+    "school_name": "Southern University"
+  },
+  {
+    "school_id": "southwestern-law-school",
+    "school_name": "Southwestern Law School"
+  },
+  {
+    "school_id": "st-johns-university",
+    "school_name": "St. John's University"
+  },
+  {
+    "school_id": "st-marys-university",
+    "school_name": "St. Mary's University"
+  },
+  {
+    "school_id": "st-thomas-university-florida",
+    "school_name": "St. Thomas University (Florida)"
+  },
+  {
+    "school_id": "stanford-university",
+    "school_name": "Stanford University"
+  },
+  {
+    "school_id": "stetson-university",
+    "school_name": "Stetson University"
+  },
+  {
+    "school_id": "suffolk-university",
+    "school_name": "Suffolk University"
+  },
+  {
+    "school_id": "syracuse-university",
+    "school_name": "Syracuse University"
+  },
+  {
+    "school_id": "temple-university",
+    "school_name": "Temple University"
+  },
+  {
+    "school_id": "texas-am-university",
+    "school_name": "Texas A&M University"
+  },
+  {
+    "school_id": "texas-southern-university",
+    "school_name": "Texas Southern University"
+  },
+  {
+    "school_id": "texas-tech-university",
+    "school_name": "Texas Tech University"
+  },
+  {
+    "school_id": "thomas-jefferson-school-of-law",
+    "school_name": "Thomas Jefferson School of Law"
+  },
+  {
+    "school_id": "touro-college",
+    "school_name": "Touro College"
+  },
+  {
+    "school_id": "tulane-university",
+    "school_name": "Tulane University"
+  },
+  {
+    "school_id": "university-of-akron",
+    "school_name": "University of Akron"
+  },
+  {
+    "school_id": "university-of-alabama",
+    "school_name": "University of Alabama"
+  },
+  {
+    "school_id": "university-of-alberta",
+    "school_name": "University of Alberta"
+  },
+  {
+    "school_id": "university-of-arizona",
+    "school_name": "University of Arizona"
+  },
+  {
+    "school_id": "university-of-arkansas-fayetteville",
+    "school_name": "University of Arkansas, Fayetteville"
+  },
+  {
+    "school_id": "university-of-arkansas-little-rock",
+    "school_name": "University of Arkansas, Little Rock"
+  },
+  {
+    "school_id": "university-of-baltimore",
+    "school_name": "University of Baltimore"
+  },
+  {
+    "school_id": "university-of-british-columbia",
+    "school_name": "University of British Columbia"
+  },
+  {
+    "school_id": "university-of-buffalosuny",
+    "school_name": "University of Buffalo—SUNY"
+  },
+  {
+    "school_id": "university-of-calgary",
+    "school_name": "University of Calgary"
+  },
+  {
+    "school_id": "university-of-california-hastings",
+    "school_name": "University of California (Hastings)"
+  },
+  {
+    "school_id": "university-of-californiaberkeley",
+    "school_name": "University of California—Berkeley"
+  },
+  {
+    "school_id": "university-of-californiadavis",
+    "school_name": "University of California—Davis"
+  },
+  {
+    "school_id": "university-of-californiairvine",
+    "school_name": "University of California—Irvine"
+  },
+  {
+    "school_id": "university-of-californialos-angeles",
+    "school_name": "University of California—Los Angeles"
+  },
+  {
+    "school_id": "university-of-chicago",
+    "school_name": "University of Chicago"
+  },
+  {
+    "school_id": "university-of-cincinnati",
+    "school_name": "University of Cincinnati"
+  },
+  {
+    "school_id": "university-of-coloradoboulder",
+    "school_name": "University of Colorado—Boulder"
+  },
+  {
+    "school_id": "university-of-connecticut",
+    "school_name": "University of Connecticut"
+  },
+  {
+    "school_id": "university-of-dayton",
+    "school_name": "University of Dayton"
+  },
+  {
+    "school_id": "university-of-denver",
+    "school_name": "University of Denver"
+  },
+  {
+    "school_id": "university-of-detroit-mercy",
+    "school_name": "University of Detroit Mercy"
+  },
+  {
+    "school_id": "university-of-florida-levin",
+    "school_name": "University of Florida (Levin)"
+  },
+  {
+    "school_id": "university-of-georgia",
+    "school_name": "University of Georgia"
+  },
+  {
+    "school_id": "university-of-hawaii",
+    "school_name": "University of Hawaii"
+  },
+  {
+    "school_id": "university-of-houston",
+    "school_name": "University of Houston"
+  },
+  {
+    "school_id": "university-of-idaho",
+    "school_name": "University of Idaho"
+  },
+  {
+    "school_id": "university-of-illinoischicago",
+    "school_name": "University of Illinois—Chicago"
+  },
+  {
+    "school_id": "university-of-illinoisurbana-champaign",
+    "school_name": "University of Illinois—Urbana Champaign"
+  },
+  {
+    "school_id": "university-of-iowa",
+    "school_name": "University of Iowa"
+  },
+  {
+    "school_id": "university-of-kansas",
+    "school_name": "University of Kansas"
+  },
+  {
+    "school_id": "university-of-kentucky",
+    "school_name": "University of Kentucky"
+  },
+  {
+    "school_id": "university-of-la-verne-college-of-law",
+    "school_name": "University of La Verne College of Law"
+  },
+  {
+    "school_id": "university-of-louisville",
+    "school_name": "University of Louisville"
+  },
+  {
+    "school_id": "university-of-maine",
+    "school_name": "University of Maine"
+  },
+  {
+    "school_id": "university-of-manitoba",
+    "school_name": "University of Manitoba"
+  },
+  {
+    "school_id": "university-of-maryland",
+    "school_name": "University of Maryland"
+  },
+  {
+    "school_id": "university-of-massachusetts-dartmouth",
+    "school_name": "University of Massachusetts Dartmouth"
+  },
+  {
+    "school_id": "university-of-memphis",
+    "school_name": "University of Memphis"
+  },
+  {
+    "school_id": "university-of-miami",
+    "school_name": "University of Miami"
+  },
+  {
+    "school_id": "university-of-michigan",
+    "school_name": "University of Michigan"
+  },
+  {
+    "school_id": "university-of-minnesota",
+    "school_name": "University of Minnesota"
+  },
+  {
+    "school_id": "university-of-mississippi",
+    "school_name": "University of Mississippi"
+  },
+  {
+    "school_id": "university-of-missouri",
+    "school_name": "University of Missouri"
+  },
+  {
+    "school_id": "university-of-missourikansas-city",
+    "school_name": "University of Missouri—Kansas City"
+  },
+  {
+    "school_id": "university-of-montana",
+    "school_name": "University of Montana"
+  },
+  {
+    "school_id": "university-of-nebraska",
+    "school_name": "University of Nebraska"
+  },
+  {
+    "school_id": "university-of-nevadalas-vegas",
+    "school_name": "University of Nevada—Las Vegas"
+  },
+  {
+    "school_id": "university-of-new-brunswick",
+    "school_name": "University of New Brunswick"
+  },
+  {
+    "school_id": "university-of-new-hampshire",
+    "school_name": "University of New Hampshire"
+  },
+  {
+    "school_id": "university-of-new-mexico",
+    "school_name": "University of New Mexico"
+  },
+  {
+    "school_id": "university-of-north-carolina",
+    "school_name": "University of North Carolina"
+  },
+  {
+    "school_id": "university-of-north-dakota",
+    "school_name": "University of North Dakota"
+  },
+  {
+    "school_id": "university-of-north-texas-at-dallas",
+    "school_name": "University of North Texas at Dallas"
+  },
+  {
+    "school_id": "university-of-notre-dame",
+    "school_name": "University of Notre Dame"
+  },
+  {
+    "school_id": "university-of-oklahoma",
+    "school_name": "University of Oklahoma"
+  },
+  {
+    "school_id": "university-of-oregon",
+    "school_name": "University of Oregon"
+  },
+  {
+    "school_id": "university-of-ottawa",
+    "school_name": "University of Ottawa"
+  },
+  {
+    "school_id": "university-of-pennsylvania",
+    "school_name": "University of Pennsylvania"
+  },
+  {
+    "school_id": "university-of-pittsburgh",
+    "school_name": "University of Pittsburgh"
+  },
+  {
+    "school_id": "university-of-puerto-rico",
+    "school_name": "University of Puerto Rico"
+  },
+  {
+    "school_id": "university-of-richmond",
+    "school_name": "University of Richmond"
+  },
+  {
+    "school_id": "university-of-san-diego",
+    "school_name": "University of San Diego"
+  },
+  {
+    "school_id": "university-of-san-francisco",
+    "school_name": "University of San Francisco"
+  },
+  {
+    "school_id": "university-of-saskatchewan",
+    "school_name": "University of Saskatchewan"
+  },
+  {
+    "school_id": "university-of-south-carolina",
+    "school_name": "University of South Carolina"
+  },
+  {
+    "school_id": "university-of-south-dakota",
+    "school_name": "University of South Dakota"
+  },
+  {
+    "school_id": "university-of-southern-california",
+    "school_name": "University of Southern California"
+  },
+  {
+    "school_id": "university-of-st-thomas-minnesota",
+    "school_name": "University of St. Thomas (Minnesota)"
+  },
+  {
+    "school_id": "university-of-tennessee",
+    "school_name": "University of Tennessee"
+  },
+  {
+    "school_id": "university-of-texas-at-austin",
+    "school_name": "University of Texas at Austin"
+  },
+  {
+    "school_id": "university-of-the-district-of-columbia",
+    "school_name": "University of the District of Columbia"
+  },
+  {
+    "school_id": "university-of-the-pacific-mcgeorge",
+    "school_name": "University of the Pacific (Mcgeorge)"
+  },
+  {
+    "school_id": "university-of-toledo",
+    "school_name": "University of Toledo"
+  },
+  {
+    "school_id": "university-of-toronto",
+    "school_name": "University of Toronto"
+  },
+  {
+    "school_id": "university-of-tulsa",
+    "school_name": "University of Tulsa"
+  },
+  {
+    "school_id": "university-of-utah",
+    "school_name": "University of Utah"
+  },
+  {
+    "school_id": "university-of-victoria",
+    "school_name": "University of Victoria"
+  },
+  {
+    "school_id": "university-of-virginia",
+    "school_name": "University of Virginia"
+  },
+  {
+    "school_id": "university-of-washington",
+    "school_name": "University of Washington"
+  },
+  {
+    "school_id": "university-of-western-ontario",
+    "school_name": "University of Western Ontario"
+  },
+  {
+    "school_id": "university-of-windsor",
+    "school_name": "University of Windsor"
+  },
+  {
+    "school_id": "university-of-wisconsin",
+    "school_name": "University of Wisconsin"
+  },
+  {
+    "school_id": "university-of-wyoming",
+    "school_name": "University of Wyoming"
+  },
+  {
+    "school_id": "valparaiso-university",
+    "school_name": "Valparaiso University"
+  },
+  {
+    "school_id": "vanderbilt-university",
+    "school_name": "Vanderbilt University"
+  },
+  {
+    "school_id": "vermont-law-school",
+    "school_name": "Vermont Law School"
+  },
+  {
+    "school_id": "villanova-university",
+    "school_name": "Villanova University"
+  },
+  {
+    "school_id": "wake-forest-university",
+    "school_name": "Wake Forest University"
+  },
+  {
+    "school_id": "washburn-university",
+    "school_name": "Washburn University"
+  },
+  {
+    "school_id": "washington-and-lee-university",
+    "school_name": "Washington and Lee University"
+  },
+  {
+    "school_id": "washington-university-in-st-louis",
+    "school_name": "Washington University in St. Louis"
+  },
+  {
+    "school_id": "wayne-state-university",
+    "school_name": "Wayne State University"
+  },
+  {
+    "school_id": "west-virginia-university",
+    "school_name": "West Virginia University"
+  },
+  {
+    "school_id": "western-michigan-university-cooley",
+    "school_name": "Western Michigan University (Cooley)"
+  },
+  {
+    "school_id": "western-new-england-university",
+    "school_name": "Western New England University"
+  },
+  {
+    "school_id": "western-state-college-of-law",
+    "school_name": "Western State College Of Law"
+  },
+  {
+    "school_id": "whittier-law-school",
+    "school_name": "Whittier Law School"
+  },
+  {
+    "school_id": "widener-universitydelaware",
+    "school_name": "Widener University—Delaware"
+  },
+  {
+    "school_id": "widener-universitypennsylvania-commonwealth",
+    "school_name": "Widener University—Pennsylvania (Commonwealth)"
+  },
+  {
+    "school_id": "willamette-university",
+    "school_name": "Willamette University"
+  },
+  {
+    "school_id": "william-mary-law-school",
+    "school_name": "William & Mary Law School"
+  },
+  {
+    "school_id": "william-mitchell-college-of-law",
+    "school_name": "William Mitchell College of Law"
+  },
+  {
+    "school_id": "wilmington-university-school-of-law",
+    "school_name": "Wilmington University School of Law"
+  },
+  {
+    "school_id": "yale-university",
+    "school_name": "Yale University"
+  },
+  {
+    "school_id": "yeshiva-university-cardozo",
+    "school_name": "Yeshiva University (Cardozo)"
+  },
+  {
+    "school_id": "york-university-osgoode-hall",
+    "school_name": "York University (Osgoode Hall)"
+  }
+]

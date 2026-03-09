@@ -1,0 +1,76 @@
+{
+  "school_id": "part-time-wayne-state-university",
+  "school_name": "(Part-time) Wayne State University",
+  "last_cycle_km": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "current_cycle_km": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "cohort_histograms": {
+    "sparse": false,
+    "reason": null,
+    "data": [
+      {
+        "applied_month": 1,
+        "bins": [
+          {
+            "cycle_week": 41,
+            "count": 1
+          }
+        ],
+        "total": 2
+      },
+      {
+        "applied_month": 5,
+        "bins": [
+          {
+            "cycle_week": 40,
+            "count": 1
+          }
+        ],
+        "total": 1
+      },
+      {
+        "applied_month": 9,
+        "bins": [
+          {
+            "cycle_week": 27,
+            "count": 1
+          }
+        ],
+        "total": 3
+      },
+      {
+        "applied_month": 10,
+        "bins": [],
+        "total": 1
+      },
+      {
+        "applied_month": 11,
+        "bins": [
+          {
+            "cycle_week": 20,
+            "count": 1
+          }
+        ],
+        "total": 1
+      },
+      {
+        "applied_month": 12,
+        "bins": [],
+        "total": 1
+      }
+    ]
+  },
+  "median_decision_week": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "current_cycle_week": null
+}

@@ -1,0 +1,84 @@
+{
+  "school_id": "part-time-capital-university",
+  "school_name": "(Part-time) Capital University",
+  "last_cycle_km": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "current_cycle_km": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "cohort_histograms": {
+    "sparse": false,
+    "reason": null,
+    "data": [
+      {
+        "applied_month": 1,
+        "bins": [
+          {
+            "cycle_week": 24,
+            "count": 1
+          }
+        ],
+        "total": 1
+      },
+      {
+        "applied_month": 2,
+        "bins": [
+          {
+            "cycle_week": 26,
+            "count": 1
+          },
+          {
+            "cycle_week": 27,
+            "count": 1
+          }
+        ],
+        "total": 2
+      },
+      {
+        "applied_month": 3,
+        "bins": [
+          {
+            "cycle_week": 27,
+            "count": 1
+          }
+        ],
+        "total": 1
+      },
+      {
+        "applied_month": 9,
+        "bins": [
+          {
+            "cycle_week": 4,
+            "count": 1
+          },
+          {
+            "cycle_week": 6,
+            "count": 1
+          }
+        ],
+        "total": 2
+      },
+      {
+        "applied_month": 12,
+        "bins": [
+          {
+            "cycle_week": 20,
+            "count": 1
+          }
+        ],
+        "total": 1
+      }
+    ]
+  },
+  "median_decision_week": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "current_cycle_week": null
+}

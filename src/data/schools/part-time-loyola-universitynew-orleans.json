@@ -1,0 +1,120 @@
+{
+  "school_id": "part-time-loyola-universitynew-orleans",
+  "school_name": "(Part-time) Loyola University—New Orleans",
+  "last_cycle_km": {
+    "sparse": false,
+    "reason": null,
+    "data": {
+      "points": [
+        {
+          "cycle_week": 0,
+          "survival": 1.0
+        },
+        {
+          "cycle_week": 26,
+          "survival": 0.4
+        },
+        {
+          "cycle_week": 48,
+          "survival": 0.2
+        }
+      ],
+      "cycle_year": 2025
+    }
+  },
+  "current_cycle_km": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "cohort_histograms": {
+    "sparse": false,
+    "reason": null,
+    "data": [
+      {
+        "applied_month": 1,
+        "bins": [
+          {
+            "cycle_week": 26,
+            "count": 2
+          },
+          {
+            "cycle_week": 27,
+            "count": 1
+          }
+        ],
+        "total": 4
+      },
+      {
+        "applied_month": 2,
+        "bins": [
+          {
+            "cycle_week": 26,
+            "count": 1
+          },
+          {
+            "cycle_week": 29,
+            "count": 1
+          },
+          {
+            "cycle_week": 34,
+            "count": 1
+          },
+          {
+            "cycle_week": 48,
+            "count": 1
+          }
+        ],
+        "total": 4
+      },
+      {
+        "applied_month": 3,
+        "bins": [
+          {
+            "cycle_week": 34,
+            "count": 1
+          }
+        ],
+        "total": 2
+      },
+      {
+        "applied_month": 5,
+        "bins": [
+          {
+            "cycle_week": 35,
+            "count": 1
+          }
+        ],
+        "total": 1
+      },
+      {
+        "applied_month": 11,
+        "bins": [
+          {
+            "cycle_week": 19,
+            "count": 1
+          },
+          {
+            "cycle_week": 23,
+            "count": 2
+          },
+          {
+            "cycle_week": 26,
+            "count": 1
+          },
+          {
+            "cycle_week": 27,
+            "count": 1
+          }
+        ],
+        "total": 5
+      }
+    ]
+  },
+  "median_decision_week": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "current_cycle_week": null
+}

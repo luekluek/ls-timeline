@@ -1,0 +1,66 @@
+{
+  "school_id": "university-of-new-brunswick",
+  "school_name": "University of New Brunswick",
+  "last_cycle_km": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "current_cycle_km": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "cohort_histograms": {
+    "sparse": false,
+    "reason": null,
+    "data": [
+      {
+        "applied_month": 1,
+        "bins": [],
+        "total": 1
+      },
+      {
+        "applied_month": 2,
+        "bins": [],
+        "total": 2
+      },
+      {
+        "applied_month": 9,
+        "bins": [
+          {
+            "cycle_week": 5,
+            "count": 1
+          }
+        ],
+        "total": 1
+      },
+      {
+        "applied_month": 10,
+        "bins": [
+          {
+            "cycle_week": 9,
+            "count": 1
+          }
+        ],
+        "total": 2
+      },
+      {
+        "applied_month": 11,
+        "bins": [
+          {
+            "cycle_week": 35,
+            "count": 1
+          }
+        ],
+        "total": 4
+      }
+    ]
+  },
+  "median_decision_week": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "current_cycle_week": null
+}

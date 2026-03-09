@@ -1,0 +1,790 @@
+{
+  "school_id": "seattle-university",
+  "school_name": "Seattle University",
+  "last_cycle_km": {
+    "sparse": false,
+    "reason": null,
+    "data": {
+      "points": [
+        {
+          "cycle_week": 0,
+          "survival": 1.0
+        },
+        {
+          "cycle_week": 14,
+          "survival": 0.97037
+        },
+        {
+          "cycle_week": 15,
+          "survival": 0.911111
+        },
+        {
+          "cycle_week": 16,
+          "survival": 0.837037
+        },
+        {
+          "cycle_week": 17,
+          "survival": 0.82963
+        },
+        {
+          "cycle_week": 18,
+          "survival": 0.807407
+        },
+        {
+          "cycle_week": 19,
+          "survival": 0.777778
+        },
+        {
+          "cycle_week": 20,
+          "survival": 0.762963
+        },
+        {
+          "cycle_week": 21,
+          "survival": 0.733333
+        },
+        {
+          "cycle_week": 22,
+          "survival": 0.674074
+        },
+        {
+          "cycle_week": 23,
+          "survival": 0.637037
+        },
+        {
+          "cycle_week": 24,
+          "survival": 0.577778
+        },
+        {
+          "cycle_week": 25,
+          "survival": 0.540741
+        },
+        {
+          "cycle_week": 26,
+          "survival": 0.511111
+        },
+        {
+          "cycle_week": 27,
+          "survival": 0.459259
+        },
+        {
+          "cycle_week": 28,
+          "survival": 0.42963
+        },
+        {
+          "cycle_week": 29,
+          "survival": 0.377778
+        },
+        {
+          "cycle_week": 30,
+          "survival": 0.362963
+        },
+        {
+          "cycle_week": 32,
+          "survival": 0.340741
+        },
+        {
+          "cycle_week": 33,
+          "survival": 0.303704
+        },
+        {
+          "cycle_week": 35,
+          "survival": 0.281481
+        },
+        {
+          "cycle_week": 36,
+          "survival": 0.266667
+        },
+        {
+          "cycle_week": 37,
+          "survival": 0.244444
+        },
+        {
+          "cycle_week": 39,
+          "survival": 0.237037
+        },
+        {
+          "cycle_week": 40,
+          "survival": 0.214815
+        },
+        {
+          "cycle_week": 41,
+          "survival": 0.2
+        }
+      ],
+      "cycle_year": 2025
+    }
+  },
+  "current_cycle_km": {
+    "sparse": false,
+    "reason": null,
+    "data": {
+      "points": [
+        {
+          "cycle_week": 0,
+          "survival": 1.0
+        },
+        {
+          "cycle_week": 10,
+          "survival": 0.993671
+        },
+        {
+          "cycle_week": 12,
+          "survival": 0.917722
+        },
+        {
+          "cycle_week": 13,
+          "survival": 0.892405
+        },
+        {
+          "cycle_week": 14,
+          "survival": 0.822785
+        },
+        {
+          "cycle_week": 15,
+          "survival": 0.791139
+        },
+        {
+          "cycle_week": 16,
+          "survival": 0.753165
+        },
+        {
+          "cycle_week": 19,
+          "survival": 0.696203
+        },
+        {
+          "cycle_week": 20,
+          "survival": 0.626582
+        },
+        {
+          "cycle_week": 21,
+          "survival": 0.594937
+        },
+        {
+          "cycle_week": 22,
+          "survival": 0.544304
+        },
+        {
+          "cycle_week": 23,
+          "survival": 0.506329
+        },
+        {
+          "cycle_week": 24,
+          "survival": 0.474684
+        },
+        {
+          "cycle_week": 25,
+          "survival": 0.443038
+        },
+        {
+          "cycle_week": 26,
+          "survival": 0.411392,
+          "in_progress": true
+        }
+      ],
+      "cycle_year": 2026
+    }
+  },
+  "cohort_histograms": {
+    "sparse": false,
+    "reason": null,
+    "data": [
+      {
+        "applied_month": 1,
+        "bins": [
+          {
+            "cycle_week": 15,
+            "count": 1
+          },
+          {
+            "cycle_week": 21,
+            "count": 6
+          },
+          {
+            "cycle_week": 22,
+            "count": 10
+          },
+          {
+            "cycle_week": 23,
+            "count": 19
+          },
+          {
+            "cycle_week": 24,
+            "count": 14
+          },
+          {
+            "cycle_week": 25,
+            "count": 16
+          },
+          {
+            "cycle_week": 26,
+            "count": 23
+          },
+          {
+            "cycle_week": 27,
+            "count": 13
+          },
+          {
+            "cycle_week": 28,
+            "count": 20
+          },
+          {
+            "cycle_week": 29,
+            "count": 23
+          },
+          {
+            "cycle_week": 30,
+            "count": 16
+          },
+          {
+            "cycle_week": 31,
+            "count": 14
+          },
+          {
+            "cycle_week": 32,
+            "count": 9
+          },
+          {
+            "cycle_week": 33,
+            "count": 7
+          },
+          {
+            "cycle_week": 34,
+            "count": 5
+          },
+          {
+            "cycle_week": 35,
+            "count": 4
+          },
+          {
+            "cycle_week": 36,
+            "count": 2
+          },
+          {
+            "cycle_week": 38,
+            "count": 1
+          },
+          {
+            "cycle_week": 42,
+            "count": 1
+          },
+          {
+            "cycle_week": 46,
+            "count": 1
+          },
+          {
+            "cycle_week": 47,
+            "count": 1
+          },
+          {
+            "cycle_week": 48,
+            "count": 1
+          }
+        ],
+        "total": 290
+      },
+      {
+        "applied_month": 2,
+        "bins": [
+          {
+            "cycle_week": 25,
+            "count": 1
+          },
+          {
+            "cycle_week": 26,
+            "count": 3
+          },
+          {
+            "cycle_week": 27,
+            "count": 7
+          },
+          {
+            "cycle_week": 28,
+            "count": 5
+          },
+          {
+            "cycle_week": 29,
+            "count": 15
+          },
+          {
+            "cycle_week": 30,
+            "count": 16
+          },
+          {
+            "cycle_week": 31,
+            "count": 11
+          },
+          {
+            "cycle_week": 32,
+            "count": 16
+          },
+          {
+            "cycle_week": 33,
+            "count": 14
+          },
+          {
+            "cycle_week": 34,
+            "count": 13
+          },
+          {
+            "cycle_week": 35,
+            "count": 5
+          },
+          {
+            "cycle_week": 36,
+            "count": 4
+          },
+          {
+            "cycle_week": 37,
+            "count": 5
+          },
+          {
+            "cycle_week": 38,
+            "count": 1
+          },
+          {
+            "cycle_week": 45,
+            "count": 1
+          },
+          {
+            "cycle_week": 47,
+            "count": 1
+          }
+        ],
+        "total": 191
+      },
+      {
+        "applied_month": 3,
+        "bins": [
+          {
+            "cycle_week": 29,
+            "count": 2
+          },
+          {
+            "cycle_week": 30,
+            "count": 2
+          },
+          {
+            "cycle_week": 31,
+            "count": 3
+          },
+          {
+            "cycle_week": 32,
+            "count": 6
+          },
+          {
+            "cycle_week": 33,
+            "count": 6
+          },
+          {
+            "cycle_week": 34,
+            "count": 6
+          },
+          {
+            "cycle_week": 35,
+            "count": 5
+          },
+          {
+            "cycle_week": 36,
+            "count": 6
+          },
+          {
+            "cycle_week": 37,
+            "count": 7
+          },
+          {
+            "cycle_week": 38,
+            "count": 1
+          },
+          {
+            "cycle_week": 39,
+            "count": 1
+          },
+          {
+            "cycle_week": 40,
+            "count": 1
+          },
+          {
+            "cycle_week": 41,
+            "count": 1
+          },
+          {
+            "cycle_week": 48,
+            "count": 2
+          }
+        ],
+        "total": 77
+      },
+      {
+        "applied_month": 4,
+        "bins": [
+          {
+            "cycle_week": 33,
+            "count": 1
+          },
+          {
+            "cycle_week": 35,
+            "count": 1
+          },
+          {
+            "cycle_week": 39,
+            "count": 2
+          },
+          {
+            "cycle_week": 40,
+            "count": 3
+          },
+          {
+            "cycle_week": 41,
+            "count": 1
+          }
+        ],
+        "total": 11
+      },
+      {
+        "applied_month": 5,
+        "bins": [
+          {
+            "cycle_week": 41,
+            "count": 1
+          }
+        ],
+        "total": 2
+      },
+      {
+        "applied_month": 6,
+        "bins": [],
+        "total": 4
+      },
+      {
+        "applied_month": 9,
+        "bins": [
+          {
+            "cycle_week": 10,
+            "count": 1
+          },
+          {
+            "cycle_week": 12,
+            "count": 10
+          },
+          {
+            "cycle_week": 13,
+            "count": 1
+          },
+          {
+            "cycle_week": 14,
+            "count": 8
+          },
+          {
+            "cycle_week": 15,
+            "count": 15
+          },
+          {
+            "cycle_week": 16,
+            "count": 8
+          },
+          {
+            "cycle_week": 17,
+            "count": 2
+          },
+          {
+            "cycle_week": 18,
+            "count": 1
+          },
+          {
+            "cycle_week": 19,
+            "count": 4
+          },
+          {
+            "cycle_week": 20,
+            "count": 3
+          },
+          {
+            "cycle_week": 21,
+            "count": 1
+          },
+          {
+            "cycle_week": 22,
+            "count": 1
+          },
+          {
+            "cycle_week": 25,
+            "count": 1
+          },
+          {
+            "cycle_week": 32,
+            "count": 1
+          },
+          {
+            "cycle_week": 36,
+            "count": 1
+          }
+        ],
+        "total": 74
+      },
+      {
+        "applied_month": 10,
+        "bins": [
+          {
+            "cycle_week": 12,
+            "count": 2
+          },
+          {
+            "cycle_week": 13,
+            "count": 3
+          },
+          {
+            "cycle_week": 14,
+            "count": 11
+          },
+          {
+            "cycle_week": 15,
+            "count": 17
+          },
+          {
+            "cycle_week": 16,
+            "count": 44
+          },
+          {
+            "cycle_week": 17,
+            "count": 5
+          },
+          {
+            "cycle_week": 18,
+            "count": 4
+          },
+          {
+            "cycle_week": 19,
+            "count": 16
+          },
+          {
+            "cycle_week": 20,
+            "count": 5
+          },
+          {
+            "cycle_week": 21,
+            "count": 13
+          },
+          {
+            "cycle_week": 22,
+            "count": 7
+          },
+          {
+            "cycle_week": 23,
+            "count": 6
+          },
+          {
+            "cycle_week": 24,
+            "count": 1
+          },
+          {
+            "cycle_week": 26,
+            "count": 1
+          },
+          {
+            "cycle_week": 27,
+            "count": 2
+          },
+          {
+            "cycle_week": 30,
+            "count": 1
+          },
+          {
+            "cycle_week": 31,
+            "count": 1
+          },
+          {
+            "cycle_week": 33,
+            "count": 2
+          },
+          {
+            "cycle_week": 37,
+            "count": 1
+          },
+          {
+            "cycle_week": 38,
+            "count": 1
+          },
+          {
+            "cycle_week": 45,
+            "count": 1
+          }
+        ],
+        "total": 192
+      },
+      {
+        "applied_month": 11,
+        "bins": [
+          {
+            "cycle_week": 14,
+            "count": 3
+          },
+          {
+            "cycle_week": 15,
+            "count": 9
+          },
+          {
+            "cycle_week": 16,
+            "count": 51
+          },
+          {
+            "cycle_week": 17,
+            "count": 6
+          },
+          {
+            "cycle_week": 18,
+            "count": 2
+          },
+          {
+            "cycle_week": 19,
+            "count": 32
+          },
+          {
+            "cycle_week": 20,
+            "count": 26
+          },
+          {
+            "cycle_week": 21,
+            "count": 23
+          },
+          {
+            "cycle_week": 22,
+            "count": 31
+          },
+          {
+            "cycle_week": 23,
+            "count": 26
+          },
+          {
+            "cycle_week": 24,
+            "count": 12
+          },
+          {
+            "cycle_week": 25,
+            "count": 12
+          },
+          {
+            "cycle_week": 26,
+            "count": 4
+          },
+          {
+            "cycle_week": 27,
+            "count": 2
+          },
+          {
+            "cycle_week": 29,
+            "count": 3
+          },
+          {
+            "cycle_week": 30,
+            "count": 1
+          },
+          {
+            "cycle_week": 34,
+            "count": 1
+          },
+          {
+            "cycle_week": 35,
+            "count": 1
+          },
+          {
+            "cycle_week": 36,
+            "count": 1
+          },
+          {
+            "cycle_week": 39,
+            "count": 1
+          }
+        ],
+        "total": 299
+      },
+      {
+        "applied_month": 12,
+        "bins": [
+          {
+            "cycle_week": 14,
+            "count": 1
+          },
+          {
+            "cycle_week": 16,
+            "count": 4
+          },
+          {
+            "cycle_week": 18,
+            "count": 1
+          },
+          {
+            "cycle_week": 19,
+            "count": 9
+          },
+          {
+            "cycle_week": 20,
+            "count": 18
+          },
+          {
+            "cycle_week": 21,
+            "count": 15
+          },
+          {
+            "cycle_week": 22,
+            "count": 34
+          },
+          {
+            "cycle_week": 23,
+            "count": 20
+          },
+          {
+            "cycle_week": 24,
+            "count": 14
+          },
+          {
+            "cycle_week": 25,
+            "count": 20
+          },
+          {
+            "cycle_week": 26,
+            "count": 18
+          },
+          {
+            "cycle_week": 27,
+            "count": 10
+          },
+          {
+            "cycle_week": 28,
+            "count": 10
+          },
+          {
+            "cycle_week": 29,
+            "count": 5
+          },
+          {
+            "cycle_week": 30,
+            "count": 2
+          },
+          {
+            "cycle_week": 32,
+            "count": 1
+          },
+          {
+            "cycle_week": 34,
+            "count": 1
+          },
+          {
+            "cycle_week": 36,
+            "count": 1
+          },
+          {
+            "cycle_week": 41,
+            "count": 1
+          }
+        ],
+        "total": 258
+      }
+    ]
+  },
+  "median_decision_week": {
+    "sparse": false,
+    "reason": null,
+    "data": 24
+  },
+  "current_cycle_week": 27
+}

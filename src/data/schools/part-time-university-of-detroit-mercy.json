@@ -1,0 +1,158 @@
+{
+  "school_id": "part-time-university-of-detroit-mercy",
+  "school_name": "(Part-time) University of Detroit Mercy",
+  "last_cycle_km": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "current_cycle_km": {
+    "sparse": false,
+    "reason": null,
+    "data": {
+      "points": [
+        {
+          "cycle_week": 0,
+          "survival": 1.0
+        },
+        {
+          "cycle_week": 13,
+          "survival": 0.974359
+        },
+        {
+          "cycle_week": 14,
+          "survival": 0.948718
+        },
+        {
+          "cycle_week": 16,
+          "survival": 0.871795
+        },
+        {
+          "cycle_week": 20,
+          "survival": 0.846154
+        },
+        {
+          "cycle_week": 22,
+          "survival": 0.820513
+        },
+        {
+          "cycle_week": 23,
+          "survival": 0.794872
+        },
+        {
+          "cycle_week": 24,
+          "survival": 0.692308
+        },
+        {
+          "cycle_week": 25,
+          "survival": 0.641026
+        },
+        {
+          "cycle_week": 26,
+          "survival": 0.615385,
+          "in_progress": true
+        }
+      ],
+      "cycle_year": 2026
+    }
+  },
+  "cohort_histograms": {
+    "sparse": false,
+    "reason": null,
+    "data": [
+      {
+        "applied_month": 1,
+        "bins": [
+          {
+            "cycle_week": 23,
+            "count": 1
+          },
+          {
+            "cycle_week": 24,
+            "count": 2
+          }
+        ],
+        "total": 5
+      },
+      {
+        "applied_month": 2,
+        "bins": [
+          {
+            "cycle_week": 24,
+            "count": 1
+          }
+        ],
+        "total": 7
+      },
+      {
+        "applied_month": 9,
+        "bins": [
+          {
+            "cycle_week": 16,
+            "count": 3
+          },
+          {
+            "cycle_week": 20,
+            "count": 1
+          },
+          {
+            "cycle_week": 25,
+            "count": 1
+          },
+          {
+            "cycle_week": 26,
+            "count": 1
+          }
+        ],
+        "total": 7
+      },
+      {
+        "applied_month": 10,
+        "bins": [
+          {
+            "cycle_week": 13,
+            "count": 1
+          },
+          {
+            "cycle_week": 14,
+            "count": 1
+          },
+          {
+            "cycle_week": 23,
+            "count": 1
+          }
+        ],
+        "total": 13
+      },
+      {
+        "applied_month": 11,
+        "bins": [
+          {
+            "cycle_week": 22,
+            "count": 1
+          },
+          {
+            "cycle_week": 24,
+            "count": 1
+          },
+          {
+            "cycle_week": 25,
+            "count": 1
+          }
+        ],
+        "total": 6
+      },
+      {
+        "applied_month": 12,
+        "bins": [],
+        "total": 3
+      }
+    ]
+  },
+  "median_decision_week": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "current_cycle_week": 27
+}

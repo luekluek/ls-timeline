@@ -1,0 +1,25 @@
+{
+  "school_id": "part-time-university-of-arkansas-little-rock",
+  "school_name": "(Part-time) University of Arkansas, Little Rock",
+  "last_cycle_km": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "current_cycle_km": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "cohort_histograms": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "median_decision_week": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "current_cycle_week": null
+}

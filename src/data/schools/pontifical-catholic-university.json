@@ -1,0 +1,25 @@
+{
+  "school_id": "pontifical-catholic-university",
+  "school_name": "Pontifical Catholic University",
+  "last_cycle_km": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "current_cycle_km": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "cohort_histograms": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "median_decision_week": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "current_cycle_week": null
+}

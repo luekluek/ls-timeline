@@ -1,0 +1,90 @@
+{
+  "school_id": "part-time-university-of-akron",
+  "school_name": "(Part-time) University of Akron",
+  "last_cycle_km": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "current_cycle_km": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "cohort_histograms": {
+    "sparse": false,
+    "reason": null,
+    "data": [
+      {
+        "applied_month": 1,
+        "bins": [
+          {
+            "cycle_week": 22,
+            "count": 2
+          },
+          {
+            "cycle_week": 26,
+            "count": 1
+          }
+        ],
+        "total": 3
+      },
+      {
+        "applied_month": 2,
+        "bins": [
+          {
+            "cycle_week": 25,
+            "count": 2
+          }
+        ],
+        "total": 2
+      },
+      {
+        "applied_month": 4,
+        "bins": [
+          {
+            "cycle_week": 45,
+            "count": 1
+          }
+        ],
+        "total": 1
+      },
+      {
+        "applied_month": 9,
+        "bins": [
+          {
+            "cycle_week": 21,
+            "count": 1
+          }
+        ],
+        "total": 1
+      },
+      {
+        "applied_month": 11,
+        "bins": [
+          {
+            "cycle_week": 12,
+            "count": 1
+          }
+        ],
+        "total": 1
+      },
+      {
+        "applied_month": 12,
+        "bins": [
+          {
+            "cycle_week": 22,
+            "count": 1
+          }
+        ],
+        "total": 1
+      }
+    ]
+  },
+  "median_decision_week": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "current_cycle_week": null
+}

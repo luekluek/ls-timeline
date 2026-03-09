@@ -1,0 +1,146 @@
+{
+  "school_id": "part-time-john-marshall-law-school",
+  "school_name": "(Part-time) John Marshall Law School",
+  "last_cycle_km": {
+    "sparse": false,
+    "reason": null,
+    "data": {
+      "points": [
+        {
+          "cycle_week": 0,
+          "survival": 1.0
+        },
+        {
+          "cycle_week": 21,
+          "survival": 0.8
+        },
+        {
+          "cycle_week": 23,
+          "survival": 0.6
+        },
+        {
+          "cycle_week": 26,
+          "survival": 0.4
+        },
+        {
+          "cycle_week": 27,
+          "survival": 0.2
+        },
+        {
+          "cycle_week": 49,
+          "survival": 0.0
+        }
+      ],
+      "cycle_year": 2025
+    }
+  },
+  "current_cycle_km": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "cohort_histograms": {
+    "sparse": false,
+    "reason": null,
+    "data": [
+      {
+        "applied_month": 1,
+        "bins": [
+          {
+            "cycle_week": 21,
+            "count": 1
+          },
+          {
+            "cycle_week": 25,
+            "count": 1
+          },
+          {
+            "cycle_week": 26,
+            "count": 1
+          }
+        ],
+        "total": 3
+      },
+      {
+        "applied_month": 2,
+        "bins": [
+          {
+            "cycle_week": 26,
+            "count": 1
+          },
+          {
+            "cycle_week": 27,
+            "count": 3
+          },
+          {
+            "cycle_week": 28,
+            "count": 1
+          },
+          {
+            "cycle_week": 29,
+            "count": 1
+          },
+          {
+            "cycle_week": 32,
+            "count": 1
+          }
+        ],
+        "total": 7
+      },
+      {
+        "applied_month": 3,
+        "bins": [
+          {
+            "cycle_week": 30,
+            "count": 1
+          }
+        ],
+        "total": 1
+      },
+      {
+        "applied_month": 6,
+        "bins": [
+          {
+            "cycle_week": 45,
+            "count": 1
+          }
+        ],
+        "total": 1
+      },
+      {
+        "applied_month": 11,
+        "bins": [
+          {
+            "cycle_week": 30,
+            "count": 1
+          }
+        ],
+        "total": 1
+      },
+      {
+        "applied_month": 12,
+        "bins": [
+          {
+            "cycle_week": 23,
+            "count": 1
+          },
+          {
+            "cycle_week": 24,
+            "count": 1
+          },
+          {
+            "cycle_week": 49,
+            "count": 1
+          }
+        ],
+        "total": 3
+      }
+    ]
+  },
+  "median_decision_week": {
+    "sparse": false,
+    "reason": null,
+    "data": 26
+  },
+  "current_cycle_week": null
+}

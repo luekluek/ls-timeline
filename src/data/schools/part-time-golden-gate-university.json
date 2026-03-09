@@ -1,0 +1,56 @@
+{
+  "school_id": "part-time-golden-gate-university",
+  "school_name": "(Part-time) Golden Gate University",
+  "last_cycle_km": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "current_cycle_km": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "cohort_histograms": {
+    "sparse": false,
+    "reason": null,
+    "data": [
+      {
+        "applied_month": 2,
+        "bins": [
+          {
+            "cycle_week": 27,
+            "count": 1
+          }
+        ],
+        "total": 1
+      },
+      {
+        "applied_month": 3,
+        "bins": [
+          {
+            "cycle_week": 42,
+            "count": 1
+          }
+        ],
+        "total": 1
+      },
+      {
+        "applied_month": 12,
+        "bins": [
+          {
+            "cycle_week": 24,
+            "count": 1
+          }
+        ],
+        "total": 3
+      }
+    ]
+  },
+  "median_decision_week": {
+    "sparse": true,
+    "reason": "insufficient_observations",
+    "data": null
+  },
+  "current_cycle_week": null
+}

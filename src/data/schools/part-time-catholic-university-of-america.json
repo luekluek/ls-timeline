@@ -1,0 +1,296 @@
+{
+  "school_id": "part-time-catholic-university-of-america",
+  "school_name": "(Part-time) Catholic University Of America",
+  "last_cycle_km": {
+    "sparse": false,
+    "reason": null,
+    "data": {
+      "points": [
+        {
+          "cycle_week": 0,
+          "survival": 1.0
+        },
+        {
+          "cycle_week": 6,
+          "survival": 0.875
+        },
+        {
+          "cycle_week": 9,
+          "survival": 0.8125
+        },
+        {
+          "cycle_week": 14,
+          "survival": 0.75
+        },
+        {
+          "cycle_week": 15,
+          "survival": 0.6875
+        },
+        {
+          "cycle_week": 16,
+          "survival": 0.5
+        },
+        {
+          "cycle_week": 24,
+          "survival": 0.4375
+        },
+        {
+          "cycle_week": 29,
+          "survival": 0.375
+        },
+        {
+          "cycle_week": 30,
+          "survival": 0.25
+        },
+        {
+          "cycle_week": 32,
+          "survival": 0.1875
+        },
+        {
+          "cycle_week": 36,
+          "survival": 0.0625
+        }
+      ],
+      "cycle_year": 2025
+    }
+  },
+  "current_cycle_km": {
+    "sparse": false,
+    "reason": null,
+    "data": {
+      "points": [
+        {
+          "cycle_week": 0,
+          "survival": 1.0
+        },
+        {
+          "cycle_week": 9,
+          "survival": 0.944444
+        },
+        {
+          "cycle_week": 11,
+          "survival": 0.833333
+        },
+        {
+          "cycle_week": 16,
+          "survival": 0.777778
+        },
+        {
+          "cycle_week": 18,
+          "survival": 0.666667
+        },
+        {
+          "cycle_week": 20,
+          "survival": 0.5
+        },
+        {
+          "cycle_week": 21,
+          "survival": 0.444444
+        },
+        {
+          "cycle_week": 23,
+          "survival": 0.277778
+        },
+        {
+          "cycle_week": 26,
+          "survival": 0.166667,
+          "in_progress": true
+        }
+      ],
+      "cycle_year": 2026
+    }
+  },
+  "cohort_histograms": {
+    "sparse": false,
+    "reason": null,
+    "data": [
+      {
+        "applied_month": 1,
+        "bins": [
+          {
+            "cycle_week": 26,
+            "count": 1
+          },
+          {
+            "cycle_week": 27,
+            "count": 1
+          },
+          {
+            "cycle_week": 30,
+            "count": 1
+          },
+          {
+            "cycle_week": 47,
+            "count": 1
+          }
+        ],
+        "total": 5
+      },
+      {
+        "applied_month": 2,
+        "bins": [
+          {
+            "cycle_week": 27,
+            "count": 1
+          },
+          {
+            "cycle_week": 29,
+            "count": 1
+          },
+          {
+            "cycle_week": 30,
+            "count": 1
+          },
+          {
+            "cycle_week": 32,
+            "count": 1
+          },
+          {
+            "cycle_week": 36,
+            "count": 1
+          }
+        ],
+        "total": 7
+      },
+      {
+        "applied_month": 3,
+        "bins": [],
+        "total": 1
+      },
+      {
+        "applied_month": 4,
+        "bins": [
+          {
+            "cycle_week": 36,
+            "count": 1
+          }
+        ],
+        "total": 1
+      },
+      {
+        "applied_month": 5,
+        "bins": [
+          {
+            "cycle_week": 39,
+            "count": 1
+          }
+        ],
+        "total": 1
+      },
+      {
+        "applied_month": 9,
+        "bins": [
+          {
+            "cycle_week": 6,
+            "count": 2
+          },
+          {
+            "cycle_week": 9,
+            "count": 2
+          },
+          {
+            "cycle_week": 11,
+            "count": 2
+          },
+          {
+            "cycle_week": 12,
+            "count": 2
+          },
+          {
+            "cycle_week": 16,
+            "count": 1
+          }
+        ],
+        "total": 9
+      },
+      {
+        "applied_month": 10,
+        "bins": [
+          {
+            "cycle_week": 14,
+            "count": 3
+          },
+          {
+            "cycle_week": 16,
+            "count": 1
+          },
+          {
+            "cycle_week": 18,
+            "count": 1
+          }
+        ],
+        "total": 5
+      },
+      {
+        "applied_month": 11,
+        "bins": [
+          {
+            "cycle_week": 14,
+            "count": 1
+          },
+          {
+            "cycle_week": 15,
+            "count": 1
+          },
+          {
+            "cycle_week": 16,
+            "count": 4
+          },
+          {
+            "cycle_week": 17,
+            "count": 1
+          },
+          {
+            "cycle_week": 18,
+            "count": 1
+          },
+          {
+            "cycle_week": 20,
+            "count": 2
+          }
+        ],
+        "total": 10
+      },
+      {
+        "applied_month": 12,
+        "bins": [
+          {
+            "cycle_week": 16,
+            "count": 2
+          },
+          {
+            "cycle_week": 20,
+            "count": 2
+          },
+          {
+            "cycle_week": 21,
+            "count": 1
+          },
+          {
+            "cycle_week": 22,
+            "count": 1
+          },
+          {
+            "cycle_week": 23,
+            "count": 3
+          },
+          {
+            "cycle_week": 24,
+            "count": 2
+          },
+          {
+            "cycle_week": 26,
+            "count": 1
+          }
+        ],
+        "total": 12
+      }
+    ]
+  },
+  "median_decision_week": {
+    "sparse": false,
+    "reason": null,
+    "data": 16
+  },
+  "current_cycle_week": 27
+}

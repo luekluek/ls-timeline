@@ -1,0 +1,291 @@
+{
+  "school_id": "part-time-seton-hall-university",
+  "school_name": "(Part-time) Seton Hall University",
+  "last_cycle_km": {
+    "sparse": false,
+    "reason": null,
+    "data": {
+      "points": [
+        {
+          "cycle_week": 0,
+          "survival": 1.0
+        },
+        {
+          "cycle_week": 16,
+          "survival": 0.923077
+        },
+        {
+          "cycle_week": 18,
+          "survival": 0.846154
+        },
+        {
+          "cycle_week": 22,
+          "survival": 0.769231
+        },
+        {
+          "cycle_week": 24,
+          "survival": 0.538462
+        },
+        {
+          "cycle_week": 27,
+          "survival": 0.461538
+        },
+        {
+          "cycle_week": 29,
+          "survival": 0.307692
+        },
+        {
+          "cycle_week": 30,
+          "survival": 0.076923
+        },
+        {
+          "cycle_week": 46,
+          "survival": 0.0
+        }
+      ],
+      "cycle_year": 2025
+    }
+  },
+  "current_cycle_km": {
+    "sparse": false,
+    "reason": null,
+    "data": {
+      "points": [
+        {
+          "cycle_week": 0,
+          "survival": 1.0
+        },
+        {
+          "cycle_week": 16,
+          "survival": 0.923077
+        },
+        {
+          "cycle_week": 18,
+          "survival": 0.846154
+        },
+        {
+          "cycle_week": 22,
+          "survival": 0.769231
+        },
+        {
+          "cycle_week": 23,
+          "survival": 0.730769
+        },
+        {
+          "cycle_week": 24,
+          "survival": 0.692308
+        },
+        {
+          "cycle_week": 26,
+          "survival": 0.5
+        },
+        {
+          "cycle_week": 27,
+          "survival": 0.423077,
+          "in_progress": true
+        }
+      ],
+      "cycle_year": 2026
+    }
+  },
+  "cohort_histograms": {
+    "sparse": false,
+    "reason": null,
+    "data": [
+      {
+        "applied_month": 1,
+        "bins": [
+          {
+            "cycle_week": 27,
+            "count": 1
+          },
+          {
+            "cycle_week": 29,
+            "count": 1
+          },
+          {
+            "cycle_week": 30,
+            "count": 3
+          }
+        ],
+        "total": 11
+      },
+      {
+        "applied_month": 2,
+        "bins": [
+          {
+            "cycle_week": 29,
+            "count": 1
+          },
+          {
+            "cycle_week": 30,
+            "count": 2
+          },
+          {
+            "cycle_week": 31,
+            "count": 1
+          },
+          {
+            "cycle_week": 32,
+            "count": 2
+          },
+          {
+            "cycle_week": 46,
+            "count": 1
+          }
+        ],
+        "total": 12
+      },
+      {
+        "applied_month": 3,
+        "bins": [
+          {
+            "cycle_week": 31,
+            "count": 1
+          },
+          {
+            "cycle_week": 34,
+            "count": 2
+          },
+          {
+            "cycle_week": 36,
+            "count": 1
+          },
+          {
+            "cycle_week": 45,
+            "count": 1
+          }
+        ],
+        "total": 6
+      },
+      {
+        "applied_month": 5,
+        "bins": [
+          {
+            "cycle_week": 35,
+            "count": 1
+          },
+          {
+            "cycle_week": 36,
+            "count": 1
+          }
+        ],
+        "total": 2
+      },
+      {
+        "applied_month": 9,
+        "bins": [
+          {
+            "cycle_week": 15,
+            "count": 1
+          },
+          {
+            "cycle_week": 16,
+            "count": 2
+          },
+          {
+            "cycle_week": 21,
+            "count": 1
+          }
+        ],
+        "total": 7
+      },
+      {
+        "applied_month": 10,
+        "bins": [
+          {
+            "cycle_week": 16,
+            "count": 2
+          },
+          {
+            "cycle_week": 18,
+            "count": 1
+          },
+          {
+            "cycle_week": 22,
+            "count": 1
+          }
+        ],
+        "total": 6
+      },
+      {
+        "applied_month": 11,
+        "bins": [
+          {
+            "cycle_week": 15,
+            "count": 1
+          },
+          {
+            "cycle_week": 18,
+            "count": 2
+          },
+          {
+            "cycle_week": 22,
+            "count": 4
+          },
+          {
+            "cycle_week": 23,
+            "count": 1
+          },
+          {
+            "cycle_week": 26,
+            "count": 3
+          },
+          {
+            "cycle_week": 27,
+            "count": 2
+          },
+          {
+            "cycle_week": 36,
+            "count": 1
+          }
+        ],
+        "total": 22
+      },
+      {
+        "applied_month": 12,
+        "bins": [
+          {
+            "cycle_week": 22,
+            "count": 3
+          },
+          {
+            "cycle_week": 24,
+            "count": 4
+          },
+          {
+            "cycle_week": 25,
+            "count": 1
+          },
+          {
+            "cycle_week": 26,
+            "count": 2
+          },
+          {
+            "cycle_week": 27,
+            "count": 1
+          },
+          {
+            "cycle_week": 30,
+            "count": 1
+          },
+          {
+            "cycle_week": 32,
+            "count": 1
+          },
+          {
+            "cycle_week": 34,
+            "count": 1
+          }
+        ],
+        "total": 14
+      }
+    ]
+  },
+  "median_decision_week": {
+    "sparse": false,
+    "reason": null,
+    "data": 27
+  },
+  "current_cycle_week": 27
+}
