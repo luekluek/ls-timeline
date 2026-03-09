@@ -13,3 +13,4 @@ export {
   CommandSeparator,
 } from './ui/command'
 export { Popover, PopoverTrigger, PopoverContent } from './ui/popover'
+export { SparsityWarning } from './SparsityWarning'

@@ -1,2 +1,5 @@
 export { useSchoolData } from './hooks/useSchoolData'
 export type { UseSchoolDataResult } from './hooks/useSchoolData'
+export { CohortHistogram } from './components/CohortHistogram'
+export { PercentileBar } from './components/PercentileBar'
+export { ExpectedDecisionLabel } from './components/ExpectedDecisionLabel'
