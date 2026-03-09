@@ -1,5 +1,6 @@
 export { default as PhasePlaceholder } from './PhasePlaceholder'
 export { default as DataFreshnessTag } from './DataFreshnessTag'
+export { StatCard } from './StatCard'
 export {
   Command,
   CommandDialog,
