@@ -59,6 +59,17 @@ class TestWeekBoundary:
 class TestDecisionCycleWeek:
     """AC #3: decision_cycle_week computed relative to same cycle_start."""
 
+    def test_decision_before_cycle_start_is_nan(self):
+        """decision_at before cycle_start → decision_cycle_week is NaN, not negative."""
+        df = make_df([{
+            "sent_at": "2025-09-01",
+            "decision_at": "2025-08-01",  # before cycle_start (2025-09-01)
+            "matriculating_year": 2026,
+        }])
+        out = normalize(df)
+        assert len(out) == 1
+        assert math.isnan(out.loc[0, "decision_cycle_week"])
+
     def test_dec_jan_year_crossing(self):
         """sent_at Oct 1 2025, decision_at Jan 20 2026, matric_year 2026.
 
@@ -82,6 +93,16 @@ class TestDecisionCycleWeek:
 
 class TestWindowFilter:
     """AC #4: Records outside the Sept–June window are excluded."""
+
+    def test_blank_sent_at_excluded(self):
+        """Row with blank/null sent_at is silently excluded — not an error."""
+        df = make_df([
+            {"sent_at": "", "matriculating_year": 2026},
+            {"sent_at": "2025-09-01", "matriculating_year": 2026},
+        ])
+        out = normalize(df)
+        assert len(out) == 1
+        assert out.loc[0, "cycle_week"] == 1
 
     def test_june_30_included(self):
         """June 30 of matriculating year is within the window (inclusive)."""
@@ -141,6 +162,21 @@ class TestDeterminism:
         out1 = normalize(df)
         out2 = normalize(df)
         pd.testing.assert_frame_equal(out1, out2)
+
+
+class TestPassThrough:
+    """Verify that columns not used by normalize() are preserved unchanged."""
+
+    def test_extra_columns_pass_through(self):
+        """Columns beyond sent_at/decision_at/matriculating_year survive unchanged."""
+        df = make_df([{"sent_at": "2025-09-01", "matriculating_year": 2026}])
+        df["school_name"] = "Harvard"
+        df["lsat"] = 175
+        out = normalize(df)
+        assert "school_name" in out.columns
+        assert "lsat" in out.columns
+        assert out.loc[0, "school_name"] == "Harvard"
+        assert out.loc[0, "lsat"] == 175
 
 
 class TestMultiCycle:

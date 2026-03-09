@@ -44,8 +44,10 @@ def normalize(df: pd.DataFrame) -> pd.DataFrame:
     # Compute cycle_week (integer, 1-based)
     df['cycle_week'] = ((df['sent_at'] - cycle_start).dt.days // 7 + 1).astype(int)
 
-    # Compute decision_cycle_week (NaN where decision_at is NaT)
+    # Compute decision_cycle_week (NaN where decision_at is NaT or before cycle_start)
     decision_days = (df['decision_at'] - cycle_start).dt.days
-    df['decision_cycle_week'] = (decision_days // 7 + 1).where(df['decision_at'].notna())
+    df['decision_cycle_week'] = (decision_days // 7 + 1).where(
+        df['decision_at'].notna() & (decision_days >= 0)
+    )
 
     return df.reset_index(drop=True)
