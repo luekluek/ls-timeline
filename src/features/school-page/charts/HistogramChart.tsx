@@ -18,16 +18,19 @@ export function HistogramChart({ data, currentCycleWeek, schoolName }: Histogram
   const containerRef = useRef<HTMLDivElement>(null)
   const { width } = useResizeObserver(containerRef)
 
+  if (width === 0) {
+    return <div ref={containerRef} className="w-full" style={{ height: `${CHART_HEIGHT}px` }} />
+  }
+
   const innerWidth = Math.max(0, width - MARGIN.left - MARGIN.right)
   const { xScale, yScale, bins } = buildHistogramScales(data, innerWidth, INNER_HEIGHT)
   const xTicks = buildXTicks(xScale, 6)
   const yTicks = buildYTicks(yScale, 4)
-  const barWidth = innerWidth > 0 ? Math.max(2, (xScale(1) - xScale(0)) * 0.8) : 4
+  const barWidth = Math.max(2, (xScale(1) - xScale(0)) * 0.8)
 
   return (
     <div ref={containerRef} className="w-full" style={{ height: `${CHART_HEIGHT}px` }}>
-      {width > 0 && (
-        <svg
+      <svg
           role="img"
           aria-label={`Decision timing histogram for ${schoolName}`}
           width={width}
@@ -97,7 +100,6 @@ export function HistogramChart({ data, currentCycleWeek, schoolName }: Histogram
             </g>
           </g>
         </svg>
-      )}
     </div>
   )
 }

@@ -55,7 +55,7 @@ describe('HistogramChart', () => {
     )
     // No strokeDasharray line (the today marker)
     const lines = Array.from(container.querySelectorAll('line'))
-    const todayMarker = lines.find(l => l.getAttribute('strokeDasharray') === '4 2')
+    const todayMarker = lines.find(l => l.getAttribute('stroke-dasharray') === '4 2')
     expect(todayMarker).toBeUndefined()
   })
 })

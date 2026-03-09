@@ -40,6 +40,9 @@ export function CohortHistogram({
       .sort((a, b) => a[0] - b[0])
       .map(([cycle_week, count]) => ({ cycle_week, count }))
     const total = pooledBins.reduce((sum, b) => sum + b.count, 0)
+    if (total === 0) {
+      return <SparsityWarning reason="insufficient_observations" />
+    }
     chartData = { applied_month: 0, bins: pooledBins, total }
     noteText = 'Showing all applicants — set an application month to see your cohort'
   }
