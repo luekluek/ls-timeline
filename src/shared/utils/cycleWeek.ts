@@ -7,11 +7,11 @@ const MONTH_BOUNDARIES: Array<[number, string]> = [
   [9, 'Nov'],
   [13, 'Dec'],
   [17, 'Jan'],
-  [18, 'Feb'],
-  [22, 'Mar'],
-  [26, 'Apr'],
-  [30, 'May'],
-  [34, 'Jun'],
+  [21, 'Feb'],
+  [25, 'Mar'],
+  [29, 'Apr'],
+  [33, 'May'],
+  [37, 'Jun'],
 ]
 
 export function formatCycleWeek(week: number): string {
