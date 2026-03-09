@@ -27,6 +27,10 @@ export function buildKmScales(
  * Build an SVG path `d` string for a KM step-function curve.
  * Uses D3 curveStepAfter: horizontal segment first, then vertical drop at each event time.
  * Returns '' for empty points array.
+ *
+ * Caller responsibility: filter out censored (in_progress === true) points before
+ * passing here. Censored observations do not cause a survival drop and should be
+ * rendered separately (e.g., tick marks), not included in the step-function path.
  */
 export function buildKmStepPath(
   points: KmPoint[],

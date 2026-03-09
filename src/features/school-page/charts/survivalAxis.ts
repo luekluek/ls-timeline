@@ -1,5 +1,5 @@
 // src/features/school-page/charts/survivalAxis.ts
-import * as d3 from 'd3'
+import type { ScaleLinear } from 'd3'
 import { formatCycleWeek } from '@/shared/utils'
 
 export type TickItem = { value: number; label: string }
@@ -9,7 +9,7 @@ export type TickItem = { value: number; label: string }
  * Labels use formatCycleWeek: "Week 27 · Apr"
  */
 export function buildXTicks(
-  scale: d3.ScaleLinear<number, number>,
+  scale: ScaleLinear<number, number>,
   count: number
 ): TickItem[] {
   return scale.ticks(count).map(v => ({ value: v, label: formatCycleWeek(v) }))
@@ -19,9 +19,13 @@ export function buildXTicks(
  * Build Y axis tick array — auto-detects scale type:
  * - Survival scale (domain max ≤ 1): formats as percentage "50%"
  * - Count scale (domain max > 1): formats as integer string "200"
+ *
+ * Assumption: count scales always have maxCount > 1 in real data (counts in hundreds).
+ * Edge case: if maxCount === 1, domain()[1] === 1 and the scale is misidentified as
+ * survival, producing "100%" instead of "1". Acceptable for this project's data range.
  */
 export function buildYTicks(
-  scale: d3.ScaleLinear<number, number>,
+  scale: ScaleLinear<number, number>,
   count: number
 ): TickItem[] {
   const isSurvivalScale = scale.domain()[1] <= 1
