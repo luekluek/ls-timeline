@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useProfile } from './ProfileContext'
 
 export function ProfileForm() {
@@ -8,11 +8,18 @@ export function ProfileForm() {
   const [lsatInput, setLsatInput] = useState('')
   const [errors, setErrors] = useState<{ gpa?: string; lsat?: string }>({})
   const [saved, setSaved] = useState(false)
+  // Tracks whether the current profile change was triggered by our own save,
+  // so we don't reset the checkmark immediately after the user hits Save.
+  const isSavingRef = useRef(false)
 
   useEffect(() => {
     if (profile !== null) {
       setGpaInput(profile.gpa.toString())
       setLsatInput(profile.lsat.toString())
+      if (!isSavingRef.current) {
+        setSaved(false)
+      }
+      isSavingRef.current = false
     }
   }, [profile])
 
@@ -24,7 +31,7 @@ export function ProfileForm() {
 
   const validateLsat = (val: string): string | undefined => {
     const n = parseInt(val, 10)
-    if (val === '' || isNaN(n) || n < 120 || n > 180)
+    if (val === '' || isNaN(n) || n < 120 || n > 180 || !Number.isInteger(parseFloat(val)))
       return 'LSAT must be between 120 and 180'
   }
 
@@ -33,6 +40,7 @@ export function ProfileForm() {
     const lsatErr = validateLsat(lsatInput)
     setErrors({ gpa: gpaErr, lsat: lsatErr })
     if (gpaErr || lsatErr) return
+    isSavingRef.current = true
     setProfile({ gpa: parseFloat(gpaInput), lsat: parseInt(lsatInput, 10) })
     setSaved(true)
   }

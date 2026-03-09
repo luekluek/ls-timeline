@@ -48,44 +48,24 @@ def _sparse_field(data) -> dict:
     return {"sparse": False, "reason": None, "data": data}
 
 
-def _determine_cycles(school_df: pd.DataFrame) -> tuple[int | None, int | None]:
-    """Determine last (complete) and current (in-progress) cycle years for a school.
+def _determine_global_current_year(cohort_df: pd.DataFrame) -> int | None:
+    """Find the application cycle year currently in-progress, shared across all schools.
 
-    A year is "in-progress" if it has ANY NaN decision_cycle_week values.
-    Returns (last_year, current_year) where either may be None.
+    A cycle is in-progress if ANY row across ALL schools has a NaN decision_cycle_week.
+    Returns the maximum such year, or None if all cycles are complete.
     """
-    years = sorted(school_df["matriculating_year"].unique())
-    complete_years = [
-        y
-        for y in years
-        if not school_df[school_df["matriculating_year"] == y]["decision_cycle_week"]
-        .isna()
-        .any()
-    ]
-    current_years = [
-        y
-        for y in years
-        if school_df[school_df["matriculating_year"] == y]["decision_cycle_week"]
-        .isna()
-        .any()
-    ]
-
-    current_year = max(current_years) if current_years else None
-
-    if current_year is not None:
-        ## last_year = most recent complete year before current
-        # prior_complete = [y for y in complete_years if y < current_year]
-        # last_year = max(prior_complete) if prior_complete else None
-        last_year = current_year - 1
-    else:
-        # No in-progress cycle — most recent year is "last"
-        last_year = max(complete_years) if complete_years else None
-
-    return (last_year, current_year)
+    in_progress_mask = cohort_df["decision_cycle_week"].isna()
+    if not in_progress_mask.any():
+        return None
+    return int(cohort_df.loc[in_progress_mask, "matriculating_year"].max())
 
 
 def compute_km(cohort_df: pd.DataFrame) -> dict:
     """Compute KM survival estimates per school per application cycle.
+
+    The current cycle year is determined globally (shared across all schools).
+    Schools with no data for the global current cycle year return sparse for
+    both last_cycle_km and current_cycle_km — they are not displayed.
 
     Args:
         cohort_df: Output of group_by_cohort(). Must have columns:
@@ -93,38 +73,48 @@ def compute_km(cohort_df: pd.DataFrame) -> dict:
 
     Returns:
         Dict keyed by school_name, each value containing:
-            last_cycle_km: SparseField wrapping KmCurve for the most recent complete cycle.
-            current_cycle_km: SparseField wrapping KmCurve for the in-progress cycle.
+            last_cycle_km: SparseField for cycle_year = global_current_year - 1.
+            current_cycle_km: SparseField for cycle_year = global_current_year.
     """
+    global_current_year = _determine_global_current_year(cohort_df)
     result = {}
 
     for school_name, school_df in cohort_df.groupby("school_name"):
-        last_year, current_year = _determine_cycles(school_df)
+        if global_current_year is None:
+            # No in-progress cycle anywhere — show nothing
+            result[school_name] = {
+                "last_cycle_km": _sparse_field(None),
+                "current_cycle_km": _sparse_field(None),
+            }
+            continue
 
-        # Compute last_cycle_km
-        if last_year is None:
-            last_cycle_data = None
-        else:
-            last_group = school_df[school_df["matriculating_year"] == last_year]
-            if len(last_group) < MIN_OBSERVATIONS:
-                last_cycle_data = None
-            else:
-                points = _compute_km_curve(last_group)
-                last_cycle_data = {"points": points, "cycle_year": int(last_year)}
+        current_group = school_df[school_df["matriculating_year"] == global_current_year]
+        if len(current_group) == 0:
+            # School has no data for the current cycle — show nothing
+            result[school_name] = {
+                "last_cycle_km": _sparse_field(None),
+                "current_cycle_km": _sparse_field(None),
+            }
+            continue
 
         # Compute current_cycle_km
-        if current_year is None:
+        if len(current_group) < MIN_OBSERVATIONS:
             current_cycle_data = None
         else:
-            current_group = school_df[school_df["matriculating_year"] == current_year]
-            if len(current_group) < MIN_OBSERVATIONS:
-                current_cycle_data = None
-            else:
-                points = _compute_km_curve(current_group)
-                # Mark the last point as in_progress
-                if points:
-                    points[-1] = dict(points[-1], in_progress=True)
-                current_cycle_data = {"points": points, "cycle_year": int(current_year)}
+            points = _compute_km_curve(current_group)
+            # Mark in_progress only if this school still has pending decisions
+            if points and current_group["decision_cycle_week"].isna().any():
+                points[-1] = dict(points[-1], in_progress=True)
+            current_cycle_data = {"points": points, "cycle_year": int(global_current_year)}
+
+        # Compute last_cycle_km (always global_current_year - 1)
+        last_year = global_current_year - 1
+        last_group = school_df[school_df["matriculating_year"] == last_year]
+        if len(last_group) < MIN_OBSERVATIONS:
+            last_cycle_data = None
+        else:
+            points = _compute_km_curve(last_group)
+            last_cycle_data = {"points": points, "cycle_year": int(last_year)}
 
         result[school_name] = {
             "last_cycle_km": _sparse_field(last_cycle_data),

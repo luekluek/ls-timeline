@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach } from 'vitest'
 import { render, screen, fireEvent } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { ProfileProvider } from './ProfileContext'
+import { ProfileProvider, useProfile } from './ProfileContext'
 import { ProfileForm } from './ProfileForm'
 
 const wrapper = ({ children }: { children: React.ReactNode }) => (
@@ -75,9 +75,48 @@ describe('ProfileForm', () => {
     expect(screen.queryByText('✓ Saved')).not.toBeInTheDocument()
   })
 
-  it('Save button is reachable via keyboard tab order', () => {
+  it('GPA, LSAT, and Save button are Tab-reachable in DOM order', async () => {
     render(<ProfileForm />, { wrapper })
+    const gpaInput = screen.getByLabelText('GPA')
+    const lsatInput = screen.getByLabelText('LSAT')
     const button = screen.getByRole('button', { name: 'Save profile' })
-    expect(button).not.toHaveAttribute('tabindex', '-1')
+
+    gpaInput.focus()
+    expect(document.activeElement).toBe(gpaInput)
+    await userEvent.tab()
+    expect(document.activeElement).toBe(lsatInput)
+    await userEvent.tab()
+    expect(document.activeElement).toBe(button)
+  })
+
+  it('rejects decimal LSAT input', async () => {
+    render(<ProfileForm />, { wrapper })
+    const lsatInput = screen.getByLabelText('LSAT')
+    await userEvent.type(lsatInput, '165.5')
+    fireEvent.blur(lsatInput)
+    expect(screen.getByRole('alert')).toHaveTextContent('LSAT must be between 120 and 180')
+    await userEvent.click(screen.getByRole('button', { name: 'Save profile' }))
+    expect(localStorage.getItem('lst.profile')).toBeNull()
+  })
+
+  it('resets checkmark when profile is updated externally', async () => {
+    function TestHarness() {
+      const { setProfile } = useProfile()
+      return (
+        <>
+          <ProfileForm />
+          <button onClick={() => setProfile({ gpa: 4.0, lsat: 175 })}>External Update</button>
+        </>
+      )
+    }
+    render(<TestHarness />, { wrapper })
+
+    await userEvent.type(screen.getByLabelText('GPA'), '3.8')
+    await userEvent.type(screen.getByLabelText('LSAT'), '172')
+    await userEvent.click(screen.getByRole('button', { name: 'Save profile' }))
+    expect(screen.getByText('✓ Saved')).toBeInTheDocument()
+
+    await userEvent.click(screen.getByRole('button', { name: 'External Update' }))
+    expect(screen.queryByText('✓ Saved')).not.toBeInTheDocument()
   })
 })
