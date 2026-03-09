@@ -1,10 +1,6 @@
 import { useWatchlist, SchoolSearch, SchoolCard } from '../features/watchlist'
 import { ProfileForm } from '../features/profile'
-import schoolsIndexJson from '../data/schools-index.json'
-
-const schoolsMap = new Map(
-  (schoolsIndexJson as { school_id: string; school_name: string }[]).map(s => [s.school_id, s.school_name])
-)
+import { schoolsMap } from '../shared/utils/schoolsMap'
 
 export default function HomePage() {
   const { watchlist, removeSchool } = useWatchlist()

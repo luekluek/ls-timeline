@@ -6,7 +6,7 @@ import { ProfileProvider } from '../features/profile'
 import { WatchlistProvider } from '../features/watchlist'
 import HomePage from './HomePage'
 
-vi.mock('../data/schools-index.json', () => ({
+vi.mock('@/data/schools-index.json', () => ({
   default: [
     { school_id: 'harvard-law', school_name: 'Harvard Law School' },
     { school_id: 'columbia-law', school_name: 'Columbia Law School' },

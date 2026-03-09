@@ -1,11 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import DataFreshnessTag from './DataFreshnessTag'
 import { useWatchlist, SchoolSearch, SchoolCard } from '@/features/watchlist'
-import schoolsIndexJson from '@/data/schools-index.json'
-
-const schoolsMap = new Map(
-  (schoolsIndexJson as { school_id: string; school_name: string }[]).map(s => [s.school_id, s.school_name])
-)
+import { schoolsMap } from '../utils/schoolsMap'
 
 export default function AppLayout() {
   const { watchlist, removeSchool } = useWatchlist()
