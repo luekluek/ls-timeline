@@ -16,5 +16,6 @@ def group_by_cohort(df: pd.DataFrame) -> pd.DataFrame:
     """
     df = df.copy()
     df['applied_month'] = df['sent_at'].dt.month
+    # sort_values is stable by default — rows with identical keys preserve CSV input order
     df = df.sort_values(['school_name', 'applied_month', 'matriculating_year'])
     return df.reset_index(drop=True)

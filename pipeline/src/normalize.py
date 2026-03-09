@@ -15,7 +15,7 @@ def normalize(df: pd.DataFrame) -> pd.DataFrame:
         Filtered DataFrame with two new columns added:
         - ``cycle_week`` (int): weeks since Sept 1 of the cycle start year; min 1.
         - ``decision_cycle_week`` (float, nullable): same formula for decision
-          date; NaN where ``decision_at`` is blank.
+          date; NaN where ``decision_at`` is blank or pre-dates cycle_start.
         All original columns are preserved unchanged.
     """
     df = df.copy()

@@ -1,4 +1,3 @@
-import numpy as np
 import pandas as pd
 import pytest
 
@@ -133,6 +132,11 @@ class TestFilterOutliersDecisionCycleWeek:
         result = filter_outliers(df)
         assert len(result) == 1
 
+    def test_decision_cycle_week_lower_bound_excluded(self):
+        df = make_df(decision_cycle_week=0.0)
+        result = filter_outliers(df)
+        assert len(result) == 0
+
     def test_decision_cycle_week_over_excluded(self):
         df = make_df(decision_cycle_week=53.0)
         result = filter_outliers(df)
@@ -151,9 +155,9 @@ class TestFilterOutliersPreservation:
 
     def test_does_not_mutate_input(self):
         df = make_df(gpa=3.5)
-        original_len = len(df)
+        df_before = df.copy()
         filter_outliers(df)
-        assert len(df) == original_len
+        pd.testing.assert_frame_equal(df, df_before)
 
     def test_index_reset_after_filter(self):
         rows = [make_df(gpa=5.5), make_df(gpa=3.5)]
@@ -255,6 +259,7 @@ class TestDeterminism:
              'sent_at': pd.Timestamp('2023-10-15'), 'school_name': 'Harvard Law', 'matriculating_year': 2024},
             {'gpa': 2.8, 'lsat': 145, 'cycle_week': 20, 'decision_cycle_week': 30.0,
              'sent_at': pd.Timestamp('2023-11-20'), 'school_name': 'Yale Law', 'matriculating_year': 2024},
+            # Columbia Law excluded by filter_outliers (gpa=5.5 > 4.33) — 2 rows survive
             {'gpa': 5.5, 'lsat': 160, 'cycle_week': 10, 'decision_cycle_week': float('nan'),
              'sent_at': pd.Timestamp('2023-10-05'), 'school_name': 'Columbia Law', 'matriculating_year': 2024},
         ])
