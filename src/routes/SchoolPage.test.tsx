@@ -56,7 +56,7 @@ describe('SchoolPage', () => {
   it('shows skeleton shimmer when loading', () => {
     mockUseSchoolData.mockReturnValue({ data: null, loading: true, sparse: false })
     renderSchoolPage()
-    expect(document.querySelector('.animate-pulse')).toBeInTheDocument()
+    expect(document.querySelectorAll('.animate-pulse').length).toBeGreaterThanOrEqual(3)
   })
 
   it('shows "School not found" when data is null and not loading', () => {

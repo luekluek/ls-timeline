@@ -15,5 +15,6 @@ describe('StatCard', () => {
     const label = screen.getByText('Of your cohort has decided')
     expect(value.className).toContain('text-indigo-400')
     expect(label.className).toContain('text-slate-500')
+    expect(value.closest('div')).toHaveClass('bg-slate-800')
   })
 })

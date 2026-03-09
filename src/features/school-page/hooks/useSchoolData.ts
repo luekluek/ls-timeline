@@ -4,7 +4,7 @@ import type { SchoolData } from '@/shared/types'
 
 // CRITICAL: Must be at module level (not inside the hook) so Vite can analyze at build time
 // This produces one chunk per school JSON file — enables lazy loading (NFR1, NFR3)
-const schoolModules = import.meta.glob('../../../data/schools/*.json')
+const schoolModules = import.meta.glob('../../../data/schools/*.json', { eager: false })
 
 export interface UseSchoolDataResult {
   data: SchoolData | null
@@ -33,11 +33,24 @@ export function useSchoolData(schoolId: string | undefined): UseSchoolDataResult
       return
     }
 
+    let cancelled = false
     setLoading(true)
-    loader().then((mod: unknown) => {
-      setData((mod as { default: SchoolData }).default)
-      setLoading(false)
-    })
+    loader()
+      .then((mod: unknown) => {
+        if (!cancelled) {
+          setData((mod as { default: SchoolData }).default)
+          setLoading(false)
+        }
+      })
+      .catch(() => {
+        if (!cancelled) {
+          setData(null)
+          setLoading(false)
+        }
+      })
+    return () => {
+      cancelled = true
+    }
   }, [schoolId])
 
   const sparse =
