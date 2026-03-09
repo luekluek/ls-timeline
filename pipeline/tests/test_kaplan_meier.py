@@ -1,8 +1,6 @@
 """Tests for pipeline/src/kaplan_meier.py — Story 2.4."""
 
-import numpy as np
 import pandas as pd
-import pytest
 
 from src.kaplan_meier import compute_km, MIN_OBSERVATIONS
 
@@ -169,6 +167,30 @@ class TestCycleDetermination:
         df = make_km_df(rows)
         result = compute_km(df)
         assert result["Test Law"]["current_cycle_km"]["sparse"] is True
+
+    def test_current_cycle_with_zero_decisions(self):
+        """Current cycle where NO decisions have been issued yet (all NaN).
+
+        Real-world: school early in cycle, no decisions out.
+        KM curve has only the origin point, marked in_progress.
+        """
+        last_rows = [
+            {"matriculating_year": 2024, "decision_cycle_week": 10.0, "cycle_week": 10}
+        ] * 6
+        current_rows = [
+            # All NaN — no decisions yet in 2025 cycle
+            {"matriculating_year": 2025, "decision_cycle_week": float("nan"), "cycle_week": w}
+            for w in range(5, 11)
+        ]
+        df = make_km_df(last_rows + current_rows)
+        result = compute_km(df)
+
+        current_km = result["Test Law"]["current_cycle_km"]
+        assert current_km["sparse"] is False
+        points = current_km["data"]["points"]
+        # Only the origin point — no events to step down on
+        assert points[0] == {"cycle_week": 0, "survival": 1.0, "in_progress": True}
+        assert len(points) == 1
 
     def test_last_cycle_uses_most_recent_complete_before_current(self):
         """With 2023 and 2024 complete and 2025 in-progress, last_year = 2024."""

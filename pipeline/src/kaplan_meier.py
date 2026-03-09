@@ -48,7 +48,7 @@ def _sparse_field(data) -> dict:
     return {"sparse": False, "reason": None, "data": data}
 
 
-def _determine_cycles(school_df: pd.DataFrame) -> tuple:
+def _determine_cycles(school_df: pd.DataFrame) -> tuple[int | None, int | None]:
     """Determine last (complete) and current (in-progress) cycle years for a school.
 
     A year is "in-progress" if it has ANY NaN decision_cycle_week values.
