@@ -63,11 +63,14 @@ describe('SchoolSearch', () => {
     expect(screen.getByText(/no schools match/i)).toBeInTheDocument()
   })
 
-  it('shows checkmark for already-watchlisted school', async () => {
+  it('shows checkmark for already-watchlisted school and cannot be selected', async () => {
     renderWithWatchlist([{ school_id: 'harvard-law', applied_month: null }])
     await userEvent.click(screen.getByRole('button', { name: /add school/i }))
     await userEvent.type(screen.getByPlaceholderText(/search schools/i), 'harv')
     expect(screen.getByLabelText(/already in watchlist/i)).toBeInTheDocument()
+    // Clicking the disabled item must NOT transition to the month step
+    await userEvent.click(screen.getByText('Harvard Law School'))
+    expect(screen.queryByLabelText(/applied month/i)).not.toBeInTheDocument()
   })
 
   it('transitions to month step on school selection', async () => {
@@ -115,6 +118,29 @@ describe('SchoolSearch', () => {
     // WatchlistProvider initializes localStorage to [] on mount; verify no school was added
     const stored = JSON.parse(localStorage.getItem('lst.watchlist') ?? '[]')
     expect(stored).toHaveLength(0)
+  })
+
+  it('Escape closes popover and resets state', async () => {
+    renderWithWatchlist()
+    await userEvent.click(screen.getByRole('button', { name: /add school/i }))
+    expect(screen.getByPlaceholderText(/search schools/i)).toBeInTheDocument()
+    await userEvent.keyboard('{Escape}')
+    expect(screen.queryByPlaceholderText(/search schools/i)).not.toBeInTheDocument()
+  })
+
+  it('reopening after external dismiss shows fresh search step', async () => {
+    renderWithWatchlist()
+    await userEvent.click(screen.getByRole('button', { name: /add school/i }))
+    await userEvent.type(screen.getByPlaceholderText(/search schools/i), 'harv')
+    await userEvent.click(screen.getByText('Harvard Law School'))
+    expect(screen.getByLabelText(/applied month/i)).toBeInTheDocument()
+    // Dismiss via Escape (simulates clicking outside)
+    await userEvent.keyboard('{Escape}')
+    expect(screen.queryByLabelText(/applied month/i)).not.toBeInTheDocument()
+    // Reopen — must show search step, not stale month step
+    await userEvent.click(screen.getByRole('button', { name: /add school/i }))
+    expect(screen.getByPlaceholderText(/search schools/i)).toBeInTheDocument()
+    expect(screen.queryByLabelText(/applied month/i)).not.toBeInTheDocument()
   })
 
   it('works with no profile set in localStorage', async () => {
