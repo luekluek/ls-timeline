@@ -73,9 +73,10 @@ def _determine_cycles(school_df: pd.DataFrame) -> tuple[int | None, int | None]:
     current_year = max(current_years) if current_years else None
 
     if current_year is not None:
-        # last_year = most recent complete year before current
-        prior_complete = [y for y in complete_years if y < current_year]
-        last_year = max(prior_complete) if prior_complete else None
+        ## last_year = most recent complete year before current
+        # prior_complete = [y for y in complete_years if y < current_year]
+        # last_year = max(prior_complete) if prior_complete else None
+        last_year = current_year - 1
     else:
         # No in-progress cycle — most recent year is "last"
         last_year = max(complete_years) if complete_years else None
