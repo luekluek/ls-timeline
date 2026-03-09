@@ -1,6 +1,5 @@
 // Month boundaries: [startWeek, monthLabel]
 // Based on the law school application cycle starting in September.
-// Note: January spans only week 17 due to calendar alignment at cycle start.
 const MONTH_BOUNDARIES: Array<[number, string]> = [
   [1, 'Sep'],
   [5, 'Oct'],

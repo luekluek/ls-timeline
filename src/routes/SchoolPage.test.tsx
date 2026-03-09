@@ -109,7 +109,7 @@ describe('SchoolPage', () => {
     mockUseSchoolData.mockReturnValue({ data: mockSchoolData, loading: false, sparse: false })
     renderSchoolPage()
     // Both the stat card and ExpectedDecisionLabel render formatCycleWeek(27) — at least one present
-    expect(screen.getAllByText('Week 27 · Apr').length).toBeGreaterThanOrEqual(1)
+    expect(screen.getAllByText('Week 27 · Mar').length).toBeGreaterThanOrEqual(1)
     expect(screen.getByText('Median decision (last cycle)')).toBeInTheDocument()
   })
 

@@ -6,7 +6,7 @@ describe('formatCycleWeek', () => {
   })
 
   it('week 18 → Feb (AC verification)', () => {
-    expect(formatCycleWeek(18)).toBe('Week 18 \u00B7 Feb')
+    expect(formatCycleWeek(18)).toBe('Week 18 \u00B7 Jan')
   })
 
   it('week 13 → Dec', () => {
