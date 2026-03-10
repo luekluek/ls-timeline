@@ -16,7 +16,7 @@ export default function AppLayout() {
 
       {/* Persistent data caveat banner — FR36 */}
       <div role="note" aria-label="Data caveat" className="bg-slate-800 border-b border-slate-700 px-4 py-2 text-xs text-amber-500">
-        ⚠️ Data is self-reported by applicants and community-sourced. Treat all statistics as estimates only.
+        Data is self-reported by applicants and community-sourced from lsd.law. Treat all statistics as estimates only.
       </div>
 
       <div className="flex flex-1">

@@ -49,7 +49,7 @@ export function CohortHistogram({
 
   return (
     <div className="space-y-2">
-      <h2 className="text-sm font-medium text-slate-400">Decision Timing</h2>
+      <h2 className="text-sm font-medium text-slate-400">Decision Timing for Cohort (last cycle)</h2>
       {noteText && <p className="text-xs text-slate-500">{noteText}</p>}
       <HistogramChart data={chartData} currentCycleWeek={currentCycleWeek} schoolName={schoolName} />
     </div>
