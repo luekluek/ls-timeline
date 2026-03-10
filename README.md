@@ -1,12 +1,12 @@
 # ls_timeline
 
-A statistical analysis web app for law school applicants that turns community-sourced application data into rigorous, interpretable insights.
+A statistical analysis web app for law school applicants.
 
 ## What it does
 
-ls_timeline helps applicants understand not just what the data shows, but what it means for their specific situation. Enter your GPA and LSAT, add schools to your watchlist, and see where you stand in the decision timeline relative to historical cohort peers — applicants who applied the same month as you, not the general pool.
+ls_timeline helps applicants understand where they are in their cycle.
 
-The core analysis is **decision timing**: Kaplan-Meier survival curves with cycle-week normalization, so you can honestly compare wait times across multiple admission cycles. A percentile progress bar and expected decision date label frame your wait relative to your cohort, answering "is my wait normal?" without implying the school is late or broke a promise.
+The core analysis is **decision timing**: Kaplan-Meier survival curves with cycle-week normalization, so you can honestly compare wait times across admission cycles. A percentile progress bar and expected decision date label frame your wait relative to your cohort, answering the question, "is my wait normal?"
 
 Your profile and watchlist persist across sessions via localStorage.
 
@@ -27,7 +27,7 @@ Your profile and watchlist persist across sessions via localStorage.
 - Multi-school overview with outcome tier clustering
 - Data sparsity warnings and hidden diagnostics panel
 
-**Phase 3 — Vision**
+**Phase 3 — idk**
 - Additional datasets
 - Annotation layers for notable cycle events
 - Shareable school-specific links
